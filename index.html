@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velha Guarda | Roleplay Server de Project Zomboid</title>
+<meta name="description" content="Velha Guarda: servidor brasileiro de roleplay em Project Zomboid. Sobrevivência, histórias e zumbis na Build 42.">
+<meta property="og:title" content="Velha Guarda · Roleplay Server">
+<meta property="og:description" content="Sobreviva ao fim do mundo com a Velha Guarda. Servidor brasileiro de roleplay em Project Zomboid.">
+<meta property="og:image" content="img/logo.png">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===================== TOPO ===================== -->
+<header class="topo">
+  <div class="wrap">
+    <a href="index.html" class="topo-logo" aria-label="Velha Guarda, página inicial"><img src="img/logo-small.png" alt="Velha Guarda"></a>
+    <button class="menu-botao" aria-label="Abrir menu" aria-expanded="false"><span></span></button>
+    <ul class="menu">
+      <li><a href="index.html" class="ativo">Início</a></li>
+      <li><a href="#projeto">O Projeto</a></li>
+      <li><a href="#noticias">Notícias</a></li>
+      <li><a href="lore.html">Lore</a></li>
+      <li><a href="regras.html">Regras</a></li>
+      <li><a href="#entrar" class="btn btn-brasa">Jogar</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ===================== CAPA ===================== -->
+<section class="capa">
+  <canvas id="cinzas"></canvas>
+  <div class="wrap capa-conteudo">
+    <img class="capa-logo" src="img/logo.png" alt="Velha Guarda Roleplay Server">
+    <p class="capa-frase">Knox County caiu. Os mortos andam. Só os mais velhos lembram como se sobrevive.</p>
+    <div class="capa-botoes">
+      <a href="#entrar" class="btn btn-brasa">Como entrar</a>
+      <a href="lore.html" class="btn btn-osso">Ler a lore</a>
+    </div>
+  </div>
+  <div class="capa-horda" aria-hidden="true"></div>
+</section>
+
+<!-- ===================== O PROJETO ===================== -->
+<section class="secao" id="projeto">
+  <div class="wrap projeto">
+    <div class="projeto-texto revelar">
+      <span class="rotulo">// o projeto</span>
+      <h2 class="titulo">Não é só sobreviver.<br><em>É viver a história.</em></h2>
+      <p>O <strong>Velha Guarda</strong> é um servidor brasileiro de <strong>roleplay em Project Zomboid</strong>. Aqui cada jogador é um sobrevivente com passado, medos e escolhas, tentando continuar vivo num mundo que acabou.</p>
+      <p>Comida acaba, o inverno chega e a horda nunca para. Alianças se formam, traições acontecem, e cada decisão pesa. A administração acompanha de perto, cria eventos e mantém o mundo vivo.</p>
+      <p>Se você quer um apocalipse com <strong>clima, consequência e comunidade</strong>, seja bem-vindo à Velha Guarda.</p>
+    </div>
+    <div class="dados revelar">
+      <div class="dado"><b>RP</b><span>roleplay sério</span></div>
+      <div class="dado"><b>B42</b><span>build 42</span></div>
+      <div class="dado"><b>PT-BR</b><span>comunidade brasileira</span></div>
+      <div class="dado"><b>24/7</b><span>mundo persistente</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="fita" aria-hidden="true"></div>
+
+<!-- ===================== SISTEMAS ===================== -->
+<section class="secao secao-escura" id="sistemas">
+  <div class="wrap">
+    <div class="secao-cabeca revelar">
+      <span class="rotulo">// feito em casa</span>
+      <h2 class="titulo">Sistemas <em>exclusivos</em></h2>
+      <p class="lead">Mods desenvolvidos pela própria equipe para deixar o apocalipse mais perigoso e o roleplay mais rico.</p>
+    </div>
+    <div class="cards">
+      <article class="card revelar">
+        <div class="card-icone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15a4 4 0 0 1 .5-8A5.5 5.5 0 0 1 17 7.5a3.75 3.75 0 0 1 1 7.4"/><path d="M8 19c1-1 2 1 3 0s2 1 3 0 2 1 3 0"/><path d="M7 15.5h10"/></svg>
+        </div>
+        <h3>Zonas Tóxicas</h3>
+        <p>Áreas tomadas por gás venenoso. Entre com proteção, ou não saia de lá.</p>
+      </article>
+      <article class="card revelar">
+        <div class="card-icone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a7 7 0 0 0-7 7v3l2 2v3h10v-3l2-2v-3a7 7 0 0 0-7-7z"/><circle cx="9" cy="11" r="1.6"/><circle cx="15" cy="11" r="1.6"/><path d="M10 18v3M14 18v3M12 14v1"/></svg>
+        </div>
+        <h3>Zonas de Infestação</h3>
+        <p>Regiões com tipos diferentes de infectados, que voltam a lotar as ruas com o tempo.</p>
+      </article>
+      <article class="card revelar">
+        <div class="card-icone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="1.5"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><path d="M9 16h.01M12 16h.01M15 16h.01"/></svg>
+        </div>
+        <h3>Cadeados com Senha</h3>
+        <p>Tranque sua base com cadeados de código. Só entra quem sabe os números.</p>
+      </article>
+      <article class="card revelar">
+        <div class="card-icone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="15" r="4"/><circle cx="17" cy="15" r="4"/><path d="M10.5 13 12 9l1.5 4"/><path d="M12 9V6"/></svg>
+        </div>
+        <h3>Algemas</h3>
+        <p>Algemas e abraçadeiras para render, prender e levar prisioneiros.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COMO ENTRAR ===================== -->
+<section class="secao" id="entrar">
+  <div class="wrap">
+    <div class="secao-cabeca revelar">
+      <span class="rotulo">// protocolo de entrada</span>
+      <h2 class="titulo">Como <em>entrar</em></h2>
+      <p class="lead">Quatro passos separam você do fim do mundo.</p>
+    </div>
+    <div class="passos">
+      <div class="passo revelar">
+        <h3>Entre no Discord</h3>
+        <p>Avisos, suporte e a comunidade ficam lá. <a class="link" href="https://discord.gg/SEU-CONVITE" target="_blank" rel="noopener">Acessar o Discord</a></p>
+      </div>
+      <div class="passo revelar">
+        <h3>Leia as regras e a lore</h3>
+        <p>Conheça as <a class="link" href="regras.html">regras</a> e a <a class="link" href="lore.html">história do servidor</a> antes de criar seu personagem.</p>
+      </div>
+      <div class="passo revelar">
+        <h3>Prepare o jogo</h3>
+        <p>Deixe o Project Zomboid na <strong>Build 42</strong> pela Steam. Os mods baixam sozinhos ao conectar.</p>
+      </div>
+      <div class="passo revelar">
+        <h3>Conecte</h3>
+        <p>Em <strong>Entrar</strong>, adicione o servidor com o endereço:</p>
+        <div class="ip">
+          <span id="ip-servidor">IP-DO-SERVIDOR:16261</span>
+          <button type="button" data-copiar="#ip-servidor">Copiar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="fita" aria-hidden="true"></div>
+
+<!-- ===================== NOTÍCIAS =====================
+     Para publicar uma notícia nova, copie um bloco <article class="noticia">
+     inteiro, cole no topo da lista e troque data, etiqueta, título e texto.
+     ==================================================== -->
+<section class="secao secao-escura" id="noticias">
+  <div class="wrap">
+    <div class="secao-cabeca centro revelar">
+      <span class="rotulo">// rádio da velha guarda</span>
+      <h2 class="titulo">Últimas <em>notícias</em></h2>
+      <p class="lead">Boletins da administração sobre atualizações, eventos e novidades do servidor.</p>
+    </div>
+    <div class="noticias">
+      <article class="noticia revelar">
+        <div class="noticia-meta"><span class="etiqueta">Aviso</span><span>07/11/2026</span></div>
+        <h3>O site da Velha Guarda está no ar</h3>
+        <p>Agora regras, lore e novidades ficam reunidas num só lugar. Salve nos favoritos e acompanhe por aqui.</p>
+      </article>
+      <article class="noticia revelar">
+        <div class="noticia-meta"><span class="etiqueta oliva">Atualização</span><span>06/11/2026</span></div>
+        <h3>Zonas Tóxicas chegaram</h3>
+        <p>Novas áreas contaminadas foram marcadas no mapa. Respirar ali sem proteção tem consequências.</p>
+      </article>
+      <article class="noticia revelar">
+        <div class="noticia-meta"><span class="etiqueta madeira">Evento</span><span>Em breve</span></div>
+        <h3>A primeira grande horda</h3>
+        <p>Fiquem atentos ao Discord. Quando o rádio chiar, procurem abrigo e reforcem as barricadas.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INSTAGRAM ===================== -->
+<section class="insta" id="instagram">
+  <div class="wrap revelar">
+    <span class="rotulo">// siga o sinal</span>
+    <h2 class="titulo">Acompanhe no <em>Instagram</em></h2>
+    <a class="insta-arroba" href="https://www.instagram.com/velhaguardaservidores/" target="_blank" rel="noopener">@velhaguardaservidores</a>
+    <p class="lead">Prints, bastidores, eventos e as melhores histórias dos sobreviventes. Marque a gente nas suas capturas de tela.</p>
+    <a class="btn btn-brasa" href="https://www.instagram.com/velhaguardaservidores/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
+      Seguir no Instagram
+    </a>
+  </div>
+  <div class="insta-horda" aria-hidden="true"></div>
+</section>
+
+<!-- ===================== RODAPÉ ===================== -->
+<footer class="rodape">
+  <div class="wrap">
+    <div class="rodape-grade">
+      <div>
+        <img src="img/logo-small.png" alt="Velha Guarda">
+        <p>Servidor brasileiro de roleplay em Project Zomboid. Sobreviva, crie sua história e honre a Velha Guarda.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="#noticias">Notícias</a></li>
+          <li><a href="lore.html">Lore</a></li>
+          <li><a href="regras.html">Regras</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Comunidade</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/velhaguardaservidores/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://discord.gg/SEU-CONVITE" target="_blank" rel="noopener">Discord</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rodape-base">
+      <span>© <span data-ano></span> Velha Guarda Servidores</span>
+      <span>Servidor de fãs, sem vínculo com a The Indie Stone.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/site.js"></script>
+</body>
+</html>
