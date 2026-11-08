@@ -4,26 +4,54 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Regras | Velha Guarda</title>
-<meta name="description" content="Regras do servidor Velha Guarda, roleplay de Project Zomboid.">
+<meta name="description" content="Velha Guarda: servidor brasileiro de roleplay em Project Zomboid. Sobrevivência, histórias e zumbis na Build 42.">
+<meta property="og:title" content="Velha Guarda · Roleplay Server">
+<meta property="og:description" content="O mundo acabou. A Guarda não. Servidor brasileiro de roleplay em Project Zomboid.">
+<meta property="og:image" content="img/logo.png">
 <link rel="icon" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&family=Special+Elite&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<!-- Ícones usados no site -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-casa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 11 12 4l9 7v9h-6v-6H9v6H3z"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18"/><path d="M12 11v6M12 7.5v.01"/></symbol>
+    <symbol id="i-sistemas" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></symbol>
+    <symbol id="i-radio" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="9" width="18" height="12"/><path d="M7 9 17 3"/><circle cx="15.5" cy="15" r="2.5"/><path d="M6 13h4M6 17h4"/></symbol>
+    <symbol id="i-pasta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 5h6l2 2h10v13H3z"/></symbol>
+    <symbol id="i-lista" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6h12M9 12h12M9 18h12M4 6h.01M4 12h.01M4 18h.01"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 4h16v12H10l-6 4z"/><path d="M9 10h.01M15 10h.01" stroke-linecap="round"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></symbol>
+    <symbol id="i-bio" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="7" r="4"/><circle cx="7.5" cy="15" r="4"/><circle cx="16.5" cy="15" r="4"/><circle cx="12" cy="12.3" r="1.6" fill="currentColor"/></symbol>
+    <symbol id="i-pessoas" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><circle cx="17" cy="8.5" r="2.5"/><path d="M17 13.5c2.6 0 4.5 1.9 4.5 4.8"/></symbol>
+    <symbol id="i-mira" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2"/><path d="M12 1v5M12 18v5M1 12h5M18 12h5"/></symbol>
+    <symbol id="i-escudo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-gas" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 15a4 4 0 0 1 .5-8A5.5 5.5 0 0 1 17 7.5a3.75 3.75 0 0 1 1 7.4"/><path d="M8 19c1-1 2 1 3 0s2 1 3 0 2 1 3 0"/><path d="M7 15.5h10"/></symbol>
+    <symbol id="i-cranio" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a7 7 0 0 0-7 7v3l2 2v3h10v-3l2-2v-3a7 7 0 0 0-7-7z"/><circle cx="9" cy="11" r="1.6"/><circle cx="15" cy="11" r="1.6"/><path d="M10 18v3M14 18v3M12 14v1"/></symbol>
+    <symbol id="i-cadeado" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><path d="M9 16h.01M12 16h.01M15 16h.01"/></symbol>
+    <symbol id="i-algema" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="15" r="4"/><circle cx="17" cy="15" r="4"/><path d="M10.5 13 12 9l1.5 4"/><path d="M12 9V6"/></symbol>
+    <symbol id="i-alerta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17v.01"/></symbol>
+  </defs>
+</svg>
 
 <header class="topo">
   <div class="wrap">
     <a href="index.html" class="topo-logo" aria-label="Velha Guarda, página inicial"><img src="img/logo-small.png" alt="Velha Guarda"></a>
     <button class="menu-botao" aria-label="Abrir menu" aria-expanded="false"><span></span></button>
     <ul class="menu">
-      <li><a href="index.html">Início</a></li>
-      <li><a href="index.html#projeto">O Projeto</a></li>
-      <li><a href="index.html#noticias">Notícias</a></li>
-      <li><a href="lore.html">Lore</a></li>
-      <li><a href="regras.html" class="ativo">Regras</a></li>
-      <li><a href="index.html#entrar" class="btn btn-brasa">Jogar</a></li>
+      <li><a href="index.html"><svg class="ico"><use href="#i-casa"/></svg>Início</a></li>
+      <li><a href="index.html#sobre"><svg class="ico"><use href="#i-info"/></svg>Sobre</a></li>
+      <li><a href="index.html#sistemas"><svg class="ico"><use href="#i-sistemas"/></svg>Sistemas</a></li>
+      <li><a href="index.html#noticias"><svg class="ico"><use href="#i-radio"/></svg>Notícias</a></li>
+      <li><a href="lore.html"><svg class="ico"><use href="#i-pasta"/></svg>Lore</a></li>
+      <li><a href="regras.html" class="ativo"><svg class="ico"><use href="#i-lista"/></svg>Regras</a></li>
+      <li class="menu-cta"><a href="https://discord.gg/SEU-CONVITE" target="_blank" rel="noopener"><svg class="ico"><use href="#i-chat"/></svg>Discord</a></li>
     </ul>
   </div>
 </header>
@@ -31,8 +59,8 @@
 <section class="banner">
   <div class="wrap">
     <div class="migalha"><a href="index.html">Início</a> / Regras</div>
-    <span class="rotulo">// código de conduta</span>
-    <h1 class="titulo">Regras do <em>servidor</em></h1>
+    <span class="rotulo">Código de conduta // v1.0</span>
+    <h1>Regras do <em>servidor</em></h1>
     <p class="lead">O mundo acabou, mas a convivência continua. Leia com atenção antes de jogar.</p>
   </div>
 </section>
@@ -46,59 +74,55 @@
      ========================================================= -->
 <section class="secao">
   <div class="wrap duas-colunas">
-
-    <aside class="indice">
-      <h4>// índice</h4>
+    <aside class="indice cantos">
+      <h4>// Índice</h4>
       <ol>
-        <li><a href="#gerais">Gerais</a></li>
+        <li><a href="#gerais">Regras gerais</a></li>
         <li><a href="#roleplay">Roleplay</a></li>
         <li><a href="#combate">Combate e PvP</a></li>
         <li><a href="#bases">Bases e saques</a></li>
         <li><a href="#discord">Discord</a></li>
       </ol>
     </aside>
-
     <div>
-      <div class="aviso">
-        Desconhecer as regras não isenta ninguém de punição. Elas podem ser atualizadas a qualquer momento; mudanças são anunciadas no Discord.
-      </div>
+      <div class="aviso"><svg><use href="#i-alerta"/></svg><span>Desconhecer as regras não isenta ninguém de punição. Elas podem ser atualizadas a qualquer momento; mudanças são anunciadas no Discord.</span></div>
 
       <div class="bloco-regras" id="gerais">
-        <h2><span>01</span> Regras gerais</h2>
+        <h2>Regras gerais <span>SEÇÃO 01</span></h2>
         <div class="regra"><span class="regra-num">1.1</span><div><h3>Respeito acima de tudo</h3><p>Sem ofensas, preconceito ou assédio, dentro e fora do personagem.</p></div></div>
         <div class="regra"><span class="regra-num">1.2</span><div><h3>Proibido hacks, cheats e exploits</h3><p>Encontrou um bug? Avise a administração em vez de abusar dele.</p></div></div>
         <div class="regra"><span class="regra-num">1.3</span><div><h3>A decisão da staff é final</h3><p>Discordou de algo? Abra um ticket no Discord com calma e provas.</p></div></div>
       </div>
 
       <div class="bloco-regras" id="roleplay">
-        <h2><span>02</span> Roleplay</h2>
+        <h2>Roleplay <span>SEÇÃO 02</span></h2>
         <div class="regra"><span class="regra-num">2.1</span><div><h3>Sem metagaming</h3><p>Não use dentro do jogo informações que seu personagem não teria como saber.</p></div></div>
         <div class="regra"><span class="regra-num">2.2</span><div><h3>Sem powergaming</h3><p>Não force ações impossíveis nem tire do outro jogador a chance de reagir.</p></div></div>
         <div class="regra"><span class="regra-num">2.3</span><div><h3>Valorize a vida</h3><p>Seu personagem tem medo de morrer. Aja como alguém que quer sobreviver.</p></div></div>
       </div>
 
       <div class="bloco-regras" id="combate">
-        <h2><span>03</span> Combate e PvP</h2>
+        <h2>Combate e PvP <span>SEÇÃO 03</span></h2>
         <div class="regra"><span class="regra-num">3.1</span><div><h3>Sem morte sem motivo (RDM)</h3><p>Todo conflito precisa de uma razão dentro do roleplay.</p></div></div>
         <div class="regra"><span class="regra-num">3.2</span><div><h3>Regra a definir</h3><p>Escreva aqui a próxima regra desta categoria.</p></div></div>
       </div>
 
       <div class="bloco-regras" id="bases">
-        <h2><span>04</span> Bases e saques</h2>
+        <h2>Bases e saques <span>SEÇÃO 04</span></h2>
         <div class="regra"><span class="regra-num">4.1</span><div><h3>Não destrua bases alheias</h3><p>Quebrar portas e paredes da base de outros jogadores não é permitido.</p></div></div>
         <div class="regra"><span class="regra-num">4.2</span><div><h3>Regra a definir</h3><p>Escreva aqui a próxima regra desta categoria.</p></div></div>
       </div>
 
       <div class="bloco-regras" id="discord">
-        <h2><span>05</span> Discord</h2>
+        <h2>Discord <span>SEÇÃO 05</span></h2>
         <div class="regra"><span class="regra-num">5.1</span><div><h3>Use os canais certos</h3><p>Cada assunto no seu canal. Suporte sempre por ticket.</p></div></div>
         <div class="regra"><span class="regra-num">5.2</span><div><h3>Regra a definir</h3><p>Escreva aqui a próxima regra desta categoria.</p></div></div>
       </div>
     </div>
-
   </div>
 </section>
 
+<!-- ===================== RODAPÉ ===================== -->
 <footer class="rodape">
   <div class="wrap">
     <div class="rodape-grade">
@@ -125,7 +149,7 @@
     </div>
     <div class="rodape-base">
       <span>© <span data-ano></span> Velha Guarda Servidores</span>
-      <span>Servidor de fãs, sem vínculo com a The Indie Stone.</span>
+      <span>Servidor de fãs · sem vínculo com a The Indie Stone</span>
     </div>
   </div>
 </footer>
