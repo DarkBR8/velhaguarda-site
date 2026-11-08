@@ -482,3 +482,71 @@ a { color: inherit; text-decoration: none; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .revelar { opacity: 1; transform: none; }
 }
+
+/* =========================================================
+   v2.1 · Regras de RP (texto longo) e Lore oficial
+   ========================================================= */
+.indice { max-height: calc(100vh - 140px); overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--linha-2) transparent; }
+.indice a.atual { color: var(--oliva-2); }
+
+.intro-regras { padding: 30px clamp(22px, 4vw, 40px); margin-bottom: 50px; }
+.intro-regras p { font-family: var(--f-mono); font-size: .9rem; color: var(--osso-2); line-height: 1.9; }
+.intro-regras p + p { margin-top: 14px; }
+.intro-regras strong { color: var(--osso); }
+
+.bloco-regras > p, .subsecao > p { font-family: var(--f-mono); font-size: .9rem; color: var(--osso-2); line-height: 1.9; margin-top: 14px; }
+.bloco-regras strong, .subsecao strong { color: var(--osso); font-weight: 600; }
+.bloco-regras h2 { margin-bottom: 4px; }
+.lista-regra { list-style: none; margin: 14px 0 4px; display: grid; gap: 8px; }
+.lista-regra li {
+  position: relative; padding-left: 26px; font-family: var(--f-mono); font-size: .88rem; color: var(--osso-2); line-height: 1.7;
+}
+.lista-regra li::before { content: "▸"; position: absolute; left: 4px; top: 0; color: var(--oliva); }
+.subsecao { margin-top: 30px; padding-top: 24px; border-top: 1px dashed var(--linha-2); scroll-margin-top: 110px; }
+.subsecao h3 {
+  display: flex; gap: 12px; align-items: baseline;
+  font-family: var(--f-tatico); font-weight: 700; font-size: 1.45rem; letter-spacing: .5px; text-transform: uppercase; line-height: 1.15;
+}
+.subsecao h3 span { font-family: var(--f-mono); font-size: .85rem; color: var(--oliva); letter-spacing: 1px; }
+.caixa {
+  margin-top: 18px; padding: 16px 20px; font-family: var(--f-mono); font-size: .86rem; line-height: 1.8; color: var(--osso);
+  border-left: 3px solid var(--oliva); background: rgba(163, 180, 106, .07);
+}
+.caixa b { display: block; font-family: var(--f-mono); font-size: .7rem; letter-spacing: 3px; text-transform: uppercase; color: var(--oliva); margin-bottom: 4px; font-weight: 600; }
+.caixa.importante { border-left-color: var(--ambar); background: rgba(217, 164, 58, .07); }
+.caixa.importante b { color: var(--ambar); }
+.frase-final {
+  margin-top: 22px; font-family: var(--f-tatico); font-weight: 700; font-size: 1.3rem; letter-spacing: .5px;
+  text-transform: uppercase; color: var(--oliva-2); line-height: 1.25;
+}
+.regra-principal { padding: clamp(28px, 5vw, 50px); text-align: center; margin-top: 20px; }
+.regra-principal .rotulo { justify-content: center; color: var(--ambar); }
+.regra-principal .rotulo::before { background: var(--ambar); }
+.regra-principal h2 { font-family: var(--f-impacto); font-weight: 400; text-transform: uppercase; font-size: clamp(2rem, 4.5vw, 3.2rem); line-height: 1; margin-bottom: 20px; }
+.regra-principal h2 em { font-style: normal; color: var(--oliva); }
+.regra-principal p { font-family: var(--f-mono); font-size: .92rem; color: var(--osso-2); line-height: 1.9; max-width: 640px; margin: 0 auto; }
+.regra-principal p + p { margin-top: 12px; }
+.regra-principal .assinatura { margin-top: 26px; font-family: var(--f-tatico); font-weight: 700; font-size: 1.15rem; letter-spacing: 2px; text-transform: uppercase; color: var(--oliva-2); }
+
+/* Lore narrativa */
+.narrativa p { font-family: var(--f-mono); font-size: .95rem; color: var(--osso); line-height: 1.95; }
+.narrativa p + p { margin-top: 18px; }
+.narrativa p.curta { color: var(--osso); }
+.narrativa p.dias { letter-spacing: 3px; text-transform: uppercase; font-size: .85rem; color: var(--oliva); }
+.narrativa .som {
+  display: block; margin: 26px 0; font-family: var(--f-impacto); font-size: clamp(2.6rem, 6vw, 4rem); line-height: 1;
+  color: var(--alerta); letter-spacing: 2px; text-shadow: 3px 3px 0 rgba(0,0,0,.6);
+}
+.narrativa blockquote {
+  margin: 24px 0; padding: 16px 20px; border-left: 3px solid var(--ambar); background: rgba(217,164,58,.06);
+  font-family: var(--f-mono); font-size: .95rem; color: var(--osso); line-height: 1.8;
+}
+.narrativa blockquote small { display: block; margin-top: 6px; color: var(--ambar); font-size: .7rem; letter-spacing: 2px; text-transform: uppercase; }
+.lore-fim { text-align: center; padding: 50px 20px 10px; }
+.lore-fim .corre { font-family: var(--f-impacto); font-size: clamp(3rem, 9vw, 6rem); line-height: 1; text-transform: uppercase; color: var(--osso); }
+.lore-fim .corre em { font-style: normal; color: var(--alerta); }
+.lore-fim p { font-family: var(--f-mono); color: var(--osso-2); margin: 18px auto 28px; max-width: 520px; font-size: .92rem; line-height: 1.8; }
+.lore-fim .capa-botoes { justify-content: center; }
+.duas-colunas > * { min-width: 0; }
+.bloco-regras h2 { flex-wrap: wrap; overflow-wrap: anywhere; }
+@media (max-width: 960px) { .indice { max-height: none; } }

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Regras | Velha Guarda</title>
-<meta name="description" content="Velha Guarda: servidor brasileiro de roleplay em Project Zomboid. Sobrevivência, histórias e zumbis na Build 42.">
+<title>Regras de RP | Velha Guarda</title>
+<meta name="description" content="Regras de roleplay do Velha Guarda RP, servidor de Project Zomboid.">
 <meta property="og:title" content="Velha Guarda · Roleplay Server">
 <meta property="og:description" content="O mundo acabou. A Guarda não. Servidor brasileiro de roleplay em Project Zomboid.">
 <meta property="og:image" content="img/logo.png">
@@ -58,65 +58,364 @@
 
 <section class="banner">
   <div class="wrap">
-    <div class="migalha"><a href="index.html">Início</a> / Regras</div>
-    <span class="rotulo">Código de conduta // v1.0</span>
-    <h1>Regras do <em>servidor</em></h1>
-    <p class="lead">O mundo acabou, mas a convivência continua. Leia com atenção antes de jogar.</p>
+    <div class="migalha"><a href="index.html">Início</a> / Regras de RP</div>
+    <span class="rotulo">Regulamento oficial // VGRP</span>
+    <h1>Regras de <em>RP</em></h1>
+    <p class="lead">Sobreviva. Interprete. Crie sua história. E não confie em ninguém.</p>
   </div>
 </section>
 
 <!-- =========================================================
      COMO EDITAR AS REGRAS
-     Cada regra é um bloco <div class="regra">. Para adicionar,
-     copie um bloco inteiro, cole abaixo e troque número, título e texto.
-     Para criar uma categoria nova, copie um <div class="bloco-regras">
-     inteiro e adicione o link dela no índice (lista <ol>).
+     Cada regra é um <div class="bloco-regras"> e cada sub-regra
+     (5.1, 7.2...) é um <div class="subsecao">.
+     Caixas especiais: <div class="caixa"><b>Exemplo</b>...</div>
+                       <div class="caixa importante"><b>Importante</b>...</div>
+     Ao criar uma regra nova, adicione também o link no índice (<ol>).
      ========================================================= -->
 <section class="secao">
   <div class="wrap duas-colunas">
     <aside class="indice cantos">
       <h4>// Índice</h4>
       <ol>
-        <li><a href="#gerais">Regras gerais</a></li>
-        <li><a href="#roleplay">Roleplay</a></li>
-        <li><a href="#combate">Combate e PvP</a></li>
-        <li><a href="#bases">Bases e saques</a></li>
-        <li><a href="#discord">Discord</a></li>
+        <li><a href="#interpretacao">Interpretação de personagem</a></li>
+        <li><a href="#metagaming">Metagaming e conhecimento do personagem</a></li>
+        <li><a href="#powergaming">Powergaming</a></li>
+        <li><a href="#comunicacao">Comunicação externa</a></li>
+        <li><a href="#assaltos">Assaltos, roubos, furtos e invasões</a></li>
+        <li><a href="#valor-vida">Valor à vida</a></li>
+        <li><a href="#morte">Morte e Permadeath (PD)</a></li>
+        <li><a href="#combates">Combates e hostilidade sem motivação</a></li>
+        <li><a href="#saida">Saída do servidor durante o RP</a></li>
+        <li><a href="#bugs">Abuso de bugs e exploração de falhas</a></li>
+        <li><a href="#rp-de-todos">O roleplay é de todos</a></li>
+        <li><a href="#gravacao">Gravação de gameplay e comprovação de ocorrências</a></li>
+        <li><a href="#eventos">Interações com a Administração durante eventos</a></li>
+        <li><a href="#medidas">Descumprimento das regras e medidas administrativas</a></li>
+        <li><a href="#regra-principal">Regra principal</a></li>
       </ol>
     </aside>
     <div>
-      <div class="aviso"><svg><use href="#i-alerta"/></svg><span>Desconhecer as regras não isenta ninguém de punição. Elas podem ser atualizadas a qualquer momento; mudanças são anunciadas no Discord.</span></div>
+      <div class="intro-regras cantos">
+        <p>O <strong>Velha Guarda RP (VGRP)</strong> é um servidor de Project Zomboid focado na interpretação de personagens, na sobrevivência e na construção de histórias em um mundo hostil.</p>
+        <p>O <strong>Roleplay (RP)</strong> consiste em interpretar um personagem respeitando sua personalidade, história, conhecimentos, limitações e experiências dentro do universo do servidor.</p>
+        <p>O objetivo não é simplesmente vencer confrontos, acumular itens ou eliminar adversários. O objetivo é <strong>construir uma história com consequências reais dentro do RP</strong>.</p>
+      </div>
+      <div class="aviso"><svg><use href="#i-alerta"/></svg><span>Ao permanecer no servidor, todos os jogadores devem conhecer e respeitar este regulamento.</span></div>
 
-      <div class="bloco-regras" id="gerais">
-        <h2>Regras gerais <span>SEÇÃO 01</span></h2>
-        <div class="regra"><span class="regra-num">1.1</span><div><h3>Respeito acima de tudo</h3><p>Sem ofensas, preconceito ou assédio, dentro e fora do personagem.</p></div></div>
-        <div class="regra"><span class="regra-num">1.2</span><div><h3>Proibido hacks, cheats e exploits</h3><p>Encontrou um bug? Avise a administração em vez de abusar dele.</p></div></div>
-        <div class="regra"><span class="regra-num">1.3</span><div><h3>A decisão da staff é final</h3><p>Discordou de algo? Abra um ticket no Discord com calma e provas.</p></div></div>
+      <div class="bloco-regras" id="interpretacao">
+        <h2>Interpretação de personagem <span>REGRA 01</span></h2>
+        <p>Todo jogador deve interpretar seu personagem de maneira coerente com sua história, personalidade, conhecimentos e limitações.</p>
+        <p>Durante o RP, considere:</p>
+        <ul class="lista-regra">
+          <li>A personalidade e o histórico do personagem;</li>
+          <li>Seus conhecimentos e experiências;</li>
+          <li>Seus medos, limitações e condições físicas;</li>
+          <li>Os acontecimentos que presenciou dentro do jogo;</li>
+          <li>As consequências de suas decisões e ações.</li>
+        </ul>
+        <p>Não interprete seu personagem como se ele tivesse acesso a informações ou conhecimentos que nunca adquiriu.</p>
+        <p class="frase-final">Lembre-se: você controla seu personagem, mas não controla a história dos outros.</p>
+      </div>
+      <div class="bloco-regras" id="metagaming">
+        <h2>Metagaming e conhecimento do personagem <span>REGRA 02</span></h2>
+        <p><strong>Metagaming</strong> é utilizar informações obtidas fora do RP para beneficiar seu personagem dentro do jogo.</p>
+        <p>É proibido utilizar informações provenientes de:</p>
+        <ul class="lista-regra">
+          <li>Discord, WhatsApp ou outros aplicativos;</li>
+          <li>Lives, streams ou transmissões de outros jogadores;</li>
+          <li>Mensagens privadas ou conversas externas;</li>
+          <li>Informações compartilhadas por terceiros fora do jogo;</li>
+          <li>Qualquer fonte à qual o personagem não teria acesso dentro da história.</li>
+        </ul>
+        <p>O personagem só poderá agir com base em informações que tenha descoberto, presenciado ou recebido por meios válidos dentro do RP.</p>
+        <div class="caixa"><b>Exemplo</b>Você descobre pelo Discord que outro jogador está escondido em determinada residência. Seu personagem não recebeu essa informação dentro do jogo. Ir diretamente até o local para encontrá-lo configura Metagaming.</div>
+        <p>Esta regra também se aplica à criação de novos personagens e continua válida após a morte de um personagem anterior.</p>
+      </div>
+      <div class="bloco-regras" id="powergaming">
+        <h2>Powergaming <span>REGRA 03</span></h2>
+        <p><strong>Powergaming</strong> é forçar situações, abusar das mecânicas do jogo ou realizar ações que retirem injustamente a possibilidade de reação e interpretação de outros jogadores.</p>
+        <p>São exemplos de Powergaming:</p>
+        <ul class="lista-regra">
+          <li>Impor ações a outro personagem sem permitir qualquer possibilidade razoável de reação;</li>
+          <li>Ignorar consequências físicas ou lógicas de uma situação;</li>
+          <li>Realizar ações incompatíveis com as capacidades do personagem;</li>
+          <li>Utilizar mecânicas do jogo para obter vantagens que não seriam plausíveis dentro do RP;</li>
+          <li>Tratar limitações, ferimentos ou situações de risco como se não existissem.</li>
+        </ul>
+        <p>As ações devem permitir que os envolvidos participem da situação e interpretem suas consequências de maneira coerente.</p>
+      </div>
+      <div class="bloco-regras" id="comunicacao">
+        <h2>Comunicação externa <span>REGRA 04</span></h2>
+        <p>Durante a jogatina, é proibido utilizar meios externos de comunicação para transmitir informações que influenciem situações de RP.</p>
+        <p>Isso inclui chamadas, mensagens, transmissões e outros meios utilizados para coordenar ações entre personagens sem uma forma válida de comunicação dentro do jogo.</p>
+        <p>Durante uma situação de RP, utilize os meios de comunicação disponíveis no jogo, respeitando suas limitações e o contexto da situação.</p>
+        <div class="caixa"><b>Exemplo</b>Um jogador identifica pessoas armadas na entrada de uma base e avisa seus amigos por uma chamada no Discord. Os personagens desses amigos não podem agir com base nessa informação se não a receberam legitimamente dentro do RP.</div>
+        <p>A comunicação externa pode ser utilizada para assuntos administrativos, suporte e organização fora do RP, desde que não seja usada para obter vantagens dentro do jogo.</p>
+      </div>
+      <div class="bloco-regras" id="assaltos">
+        <h2>Assaltos, roubos, furtos e invasões <span>REGRA 05</span></h2>
+        <p>Toda ação contra outro jogador ou seu patrimônio deverá possuir uma motivação coerente dentro do RP. Não é permitido iniciar assaltos, furtos ou invasões exclusivamente para conseguir itens, testar equipamentos ou prejudicar outros jogadores.</p>
+        <p>São exemplos de motivações que podem justificar essas ações:</p>
+        <ul class="lista-regra">
+          <li>Recuperar algo que foi roubado;</li>
+          <li>Obter informações relevantes para uma história;</li>
+          <li>Resolver um conflito desenvolvido dentro do RP;</li>
+          <li>Realizar uma cobrança ou exigir explicações;</li>
+          <li>Buscar recursos necessários para um objetivo específico;</li>
+          <li>Desenvolver uma rivalidade ou consequência de acontecimentos anteriores.</li>
+        </ul>
+        <p>A existência de uma motivação não autoriza qualquer tipo de ação. A abordagem e suas consequências também devem respeitar as demais regras do servidor.</p>
+        <div class="subsecao" id="regra-5-1">
+          <h3><span>5.1</span>Gravação e validação das ações</h3>
+          <p>Todo assalto ou furto realizado contra outro jogador deverá ser <strong>gravado</strong> e encaminhado à Administração por meio de um ticket de suporte.</p>
+          <p>O responsável pela ação deverá apresentar:</p>
+          <ul class="lista-regra">
+            <li>A gravação da ocorrência;</li>
+            <li>O motivo e o contexto da ação dentro do RP;</li>
+            <li>Trechos suficientes para que a Administração compreenda os acontecimentos;</li>
+            <li>Outras informações ou evidências solicitadas pela equipe, quando necessárias.</li>
+          </ul>
+          <p>A gravação deverá apresentar, sempre que possível, o contexto anterior, a abordagem, o desenvolvimento da situação e seu desfecho. Trechos isolados que impeçam a compreensão dos acontecimentos poderão ser considerados insuficientes para a análise.</p>
+          <p>A Administração avaliará se a ação respeitou o regulamento. O envio da gravação não representa aprovação automática do assalto ou furto.</p>
+          <div class="caixa importante"><b>Importante</b>Ações sem gravação ou sem evidências suficientes poderão ser consideradas não comprovadas ou irregulares. O descumprimento desta obrigação poderá resultar em advertência ou outras medidas administrativas, conforme a gravidade da ocorrência.</div>
+        </div>
+        <div class="subsecao" id="regra-5-2">
+          <h3><span>5.2</span>Sobrevivência da vítima</h3>
+          <p>Após um assalto, a vítima não poderá ser deixada completamente sem condições de continuar sua sobrevivência.</p>
+          <p>O assaltante deverá deixar <strong>água e comida suficientes para aproximadamente um dia</strong> de sobrevivência dentro do jogo, considerando as circunstâncias da situação.</p>
+          <p>A regra não obriga o assaltante a preservar todos os recursos da vítima, mas impede que o roubo seja utilizado exclusivamente para inviabilizar sua continuidade no servidor.</p>
+          <p class="frase-final">O objetivo é criar uma situação de RP, não eliminar a experiência de outro jogador.</p>
+        </div>
+        <div class="subsecao" id="regra-5-3">
+          <h3><span>5.3</span>Invasões e conflitos entre jogadores</h3>
+          <p>Invasões, perseguições e ataques a bases ou propriedades deverão possuir uma justificativa válida dentro do RP.</p>
+          <p>Não é permitido invadir ou atacar alguém simplesmente porque:</p>
+          <ul class="lista-regra">
+            <li>Você sabe que o jogador possui itens valiosos;</li>
+            <li>Deseja conseguir recursos ou equipamentos;</li>
+            <li>Está entediado ou quer testar uma arma;</li>
+            <li>Descobriu a localização da pessoa por meios externos;</li>
+            <li>Deseja iniciar um conflito sem qualquer contexto dentro da história.</li>
+          </ul>
+          <p>A motivação deverá ser compatível com a gravidade da ação. Um desentendimento simples não deve ser utilizado automaticamente como justificativa para destruir uma base ou eliminar um personagem.</p>
+        </div>
+        <div class="subsecao" id="regra-5-4">
+          <h3><span>5.4</span>Reação da vítima durante assaltos</h3>
+          <p>Durante um assalto, a vítima poderá reagir à abordagem, assumindo os riscos e as consequências de sua decisão.</p>
+          <p>Caso a vítima reaja e o assaltante seja morto em decorrência dessa reação, <strong>o personagem do assaltante sofrerá Permadeath (PD)</strong>.</p>
+          <p>Essa regra representa o risco assumido por quem decide realizar um assalto contra outro sobrevivente. Antes de iniciar a abordagem, o jogador deverá estar ciente de que a vítima poderá reagir e de que a morte de seu personagem poderá representar o encerramento definitivo de sua história.</p>
+          <p>A aplicação do PD deverá respeitar as evidências da ocorrência e a análise da Administração, especialmente para confirmar que a morte aconteceu no contexto da reação da vítima durante o assalto.</p>
+        </div>
+        <div class="subsecao" id="regra-5-5">
+          <h3><span>5.5</span>Defesa de propriedade durante invasões</h3>
+          <p>Durante uma invasão a uma base ou propriedade, o proprietário ou os moradores legítimos poderão <strong>abrir fogo contra os invasores a qualquer momento</strong>, sem a necessidade de interação ou aviso prévio.</p>
+          <p>A invasão de uma propriedade constitui uma situação de ameaça à segurança dos ocupantes e de seu patrimônio. Portanto, o proprietário não será obrigado a iniciar uma conversa, emitir advertências ou negociar com os invasores antes de reagir.</p>
+          <p>Essa autorização aplica-se exclusivamente ao contexto de uma invasão efetiva à propriedade. O simples fato de um jogador passar próximo à base, permanecer nas proximidades ou circular pela região não caracteriza, por si só, uma invasão.</p>
+          <p>A defesa da propriedade deverá ocorrer dentro do contexto da invasão e não poderá ser utilizada como justificativa para perseguir ou atacar jogadores sem relação com a ocorrência.</p>
+          <div class="caixa importante"><b>Importante</b>A ausência de obrigação de interação prévia para defender a base não elimina a necessidade de respeitar as demais regras do servidor. A Administração poderá analisar as circunstâncias e as evidências apresentadas em caso de denúncia.</div>
+        </div>
+      </div>
+      <div class="bloco-regras" id="valor-vida">
+        <h2>Valor à vida <span>REGRA 06</span></h2>
+        <p>Seu personagem deve demonstrar preocupação com a própria sobrevivência, considerando que vive em um mundo hostil no qual ferimentos e mortes podem ter consequências graves.</p>
+        <p>São comportamentos incompatíveis com esta regra:</p>
+        <ul class="lista-regra">
+          <li>Enfrentar grupos armados sozinho sem justificativa plausível;</li>
+          <li>Ignorar ameaças sérias sem considerar os riscos;</li>
+          <li>Colocar-se deliberadamente em perigo apenas por diversão;</li>
+          <li>Agir como se o personagem fosse imortal;</li>
+          <li>Desconsiderar completamente a superioridade numérica ou armamentista de seus adversários.</li>
+        </ul>
+        <p>Valorizar a vida não significa evitar todo confronto. Significa interpretar os riscos de acordo com a situação e com as características do personagem.</p>
+      </div>
+      <div class="bloco-regras" id="morte">
+        <h2>Morte e Permadeath (PD) <span>REGRA 07</span></h2>
+        <p>No Velha Guarda RP, existem duas possibilidades distintas: <strong>Morte</strong> e <strong>Permadeath (PD)</strong>.</p>
+        <div class="subsecao" id="regra-7-1">
+          <h3><span>7.1</span>Morte comum</h3>
+          <p>A morte comum não representa o encerramento definitivo da história do personagem.</p>
+          <p>Para fins de RP, considere que o personagem ficou inconsciente e, ao retornar, <strong>perdeu a memória dos 30 minutos anteriores à morte</strong>.</p>
+          <p>Após retornar ao jogo:</p>
+          <ul class="lista-regra">
+            <li>Não poderá se lembrar dos acontecimentos ocorridos nesse intervalo;</li>
+            <li>Não poderá buscar vingança com base em informações que perdeu;</li>
+            <li>Não poderá retornar ao local da morte quando ela tiver sido causada por outro jogador;</li>
+            <li>Não poderá tentar recuperar itens ou interferir na situação com base em informações que não recorda.</li>
+          </ul>
+          <p>A perda de memória deve ser respeitada mesmo que o jogador, fora do personagem, saiba exatamente o que aconteceu.</p>
+          <p class="frase-final">Você sobreviveu, mas não se lembra de tudo o que aconteceu.</p>
+        </div>
+        <div class="subsecao" id="regra-7-2">
+          <h3><span>7.2</span>Permadeath (PD)</h3>
+          <p>O Permadeath representa o fim definitivo da história de um personagem.</p>
+          <p>Quando um PD é aplicado, o personagem é considerado morto dentro da história e não poderá mais ser utilizado pelo jogador.</p>
+          <p>O jogador deverá criar um novo personagem, com nova identidade, história, relações e experiências.</p>
+          <p>O novo personagem não poderá herdar automaticamente os conhecimentos, contatos, rivalidades, informações ou recursos narrativos do personagem anterior.</p>
+        </div>
+        <div class="subsecao" id="regra-7-3">
+          <h3><span>7.3</span>Solicitação de Permadeath</h3>
+          <p>Toda solicitação de PD deverá ser encaminhada à Administração por meio de um ticket.</p>
+          <ul class="lista-regra">
+            <li><strong>PD próprio:</strong> o jogador poderá solicitar o encerramento definitivo de seu próprio personagem.</li>
+            <li><strong>PD de outro personagem:</strong> o solicitante deverá apresentar uma justificativa plausível, com contexto e construção de RP que sustentem a solicitação.</li>
+          </ul>
+          <p>O PD não deverá ser utilizado como ferramenta de vingança pessoal, obtenção de loot ou eliminação arbitrária de outro jogador.</p>
+        </div>
+        <div class="subsecao" id="regra-7-4">
+          <h3><span>7.4</span>Análise e decisão da Administração</h3>
+          <p>A solicitação não garante aprovação automática. A Administração avaliará fatores como:</p>
+          <ul class="lista-regra">
+            <li>A construção e a evolução do RP;</li>
+            <li>A motivação apresentada;</li>
+            <li>O contexto e o histórico dos personagens envolvidos;</li>
+            <li>A coerência da situação;</li>
+            <li>O impacto do encerramento na história dos envolvidos.</li>
+          </ul>
+          <p>A Administração poderá aprovar ou recusar a solicitação. Sua decisão deverá ser respeitada.</p>
+          <p class="frase-final">Permadeath não é uma ferramenta para vencer uma disputa. É o encerramento de uma história.</p>
+        </div>
+      </div>
+      <div class="bloco-regras" id="combates">
+        <h2>Combates e hostilidade sem motivação <span>REGRA 08</span></h2>
+        <p>É proibido atacar, ferir ou matar outro jogador sem uma justificativa coerente dentro do RP.</p>
+        <p>Confrontos devem surgir de situações interpretadas e de acontecimentos que forneçam contexto à hostilidade.</p>
+        <p>Não são justificativas válidas, por si só:</p>
+        <ul class="lista-regra">
+          <li>Querer testar armas ou equipamentos em outro jogador;</li>
+          <li>Desejar conseguir loot;</li>
+          <li>Estar entediado;</li>
+          <li>Querer provocar confrontos sem contexto;</li>
+          <li>Ter informações obtidas fora do jogo.</li>
+        </ul>
+        <p>O fato de dois personagens se encontrarem não significa que um confronto deva acontecer. Ameaças, negociações, perseguições, desconfianças e conflitos podem ser desenvolvidos por meio da interpretação.</p>
+        <div class="subsecao" id="regra-8-1">
+          <h3><span>8.1</span>KOS (Kill on Sight)</h3>
+          <p><strong>KOS</strong> é matar ou tentar matar outro jogador imediatamente ao avistá-lo, sem abordagem, contexto ou desenvolvimento prévio de RP que justifique a agressão.</p>
+          <p><strong>O KOS é proibido no Velha Guarda RP.</strong></p>
+          <p>Toda ação hostil contra outro jogador deverá possuir uma motivação coerente dentro do RP e estar inserida em um contexto que justifique a ação. O simples fato de encontrar outro jogador, desconfiar dele ou desejar seus equipamentos não autoriza um ataque.</p>
+          <p>Antes de iniciar uma ação hostil, o jogador deverá construir uma situação de RP compatível com o contexto, permitindo que a interação se desenvolva de maneira coerente.</p>
+          <p>São exemplos de KOS:</p>
+          <ul class="lista-regra">
+            <li>Atirar em um jogador assim que avistá-lo, sem qualquer contexto de RP;</li>
+            <li>Matar alguém apenas por estar armado ou carregando itens valiosos;</li>
+            <li>Eliminar jogadores desconhecidos simplesmente por se aproximarem de uma base;</li>
+            <li>Atacar alguém apenas por pertencer a um grupo ou facção, sem uma motivação válida dentro da história.</li>
+          </ul>
+          <div class="caixa importante"><b>Importante</b>Possuir uma rivalidade ou um conflito anterior não autoriza automaticamente qualquer ataque. A ação deverá respeitar as demais regras do servidor e possuir um contexto válido.</div>
+          <p>O objetivo desta regra não é impedir confrontos, mas garantir que eles sejam consequência de histórias e interações, e não de ataques aleatórios.</p>
+        </div>
+        <div class="subsecao" id="regra-8-2">
+          <h3><span>8.2</span>RDM (Random Deathmatch)</h3>
+          <p><strong>RDM</strong> é atacar, ferir ou matar outro jogador sem uma motivação válida dentro do RP, transformando a violência em uma ação aleatória e sem contexto narrativo.</p>
+          <p><strong>O RDM é proibido no Velha Guarda RP.</strong></p>
+          <p>Toda agressão deverá possuir uma justificativa coerente com os acontecimentos dentro do jogo. A vontade pessoal do jogador de conseguir loot, testar uma arma, provocar alguém ou iniciar um combate não constitui, por si só, uma justificativa válida.</p>
+          <p>São exemplos de RDM:</p>
+          <ul class="lista-regra">
+            <li>Matar um jogador aleatório sem qualquer interação ou contexto de RP;</li>
+            <li>Atirar em alguém apenas porque ele apareceu na sua frente;</li>
+            <li>Ferir ou matar outro jogador por diversão;</li>
+            <li>Iniciar um confronto letal sem motivação compatível com a situação;</li>
+            <li>Utilizar um pequeno desentendimento como pretexto para uma agressão sem proporção ou contexto plausível.</li>
+          </ul>
+          <p>Conflitos legítimos, como rivalidades desenvolvidas dentro do RP, disputas por acontecimentos anteriores ou ações decorrentes de uma história, poderão resultar em confrontos, desde que respeitem as demais regras do servidor.</p>
+          <p class="frase-final">A existência de um conflito não elimina a necessidade de interpretar a situação.</p>
+        </div>
+        <div class="subsecao" id="regra-8-3">
+          <h3><span>8.3</span>RVM (Random Vehicle Murder)</h3>
+          <p><strong>RVM</strong> é utilizar um veículo para atropelar, atingir ou matar intencionalmente outro jogador sem uma motivação válida dentro do RP.</p>
+          <p><strong>O RVM é proibido no Velha Guarda RP.</strong></p>
+          <p>Veículos devem ser utilizados de maneira coerente com a situação e com a interpretação do personagem. Não é permitido transformar um veículo em uma arma para atacar jogadores aleatoriamente ou obter vantagens indevidas.</p>
+          <p>São exemplos de RVM:</p>
+          <ul class="lista-regra">
+            <li>Atropelar deliberadamente um jogador apenas por encontrá-lo na estrada;</li>
+            <li>Utilizar um veículo para matar alguém sem qualquer contexto de RP;</li>
+            <li>Acelerar contra um grupo de jogadores apenas para causar mortes ou provocar confusão;</li>
+            <li>Utilizar repetidamente o veículo para atingir jogadores sem uma justificativa coerente dentro da história.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bloco-regras" id="saida">
+        <h2>Saída do servidor durante o RP <span>REGRA 09</span></h2>
+        <p>É proibido sair deliberadamente do servidor para evitar as consequências de uma situação de RP. Isso inclui desconectar para escapar de:</p>
+        <ul class="lista-regra">
+          <li>Um assalto ou abordagem;</li>
+          <li>Uma perseguição;</li>
+          <li>Um confronto em andamento;</li>
+          <li>Uma tentativa de invasão;</li>
+          <li>Uma prisão ou outra consequência interpretada;</li>
+          <li>Qualquer situação hostil na qual o personagem esteja envolvido.</li>
+        </ul>
+        <p>Problemas de conexão, falhas técnicas ou desconexões involuntárias deverão ser comunicados à Administração quando necessário.</p>
+        <p>Sempre que possível, o jogador deverá apresentar evidências da desconexão involuntária e retornar à situação quando for viável, seguindo as orientações da equipe.</p>
+      </div>
+      <div class="bloco-regras" id="bugs">
+        <h2>Abuso de bugs e exploração de falhas <span>REGRA 10</span></h2>
+        <p>É proibido explorar bugs, falhas ou comportamentos inesperados do jogo ou dos mods para obter vantagens indevidas. Isso inclui utilizar falhas para:</p>
+        <ul class="lista-regra">
+          <li>Duplicar itens ou recursos;</li>
+          <li>Acessar áreas ou propriedades indevidamente;</li>
+          <li>Contornar fechaduras, sistemas de segurança ou restrições;</li>
+          <li>Obter invulnerabilidade ou vantagens indevidas;</li>
+          <li>Prejudicar outros jogadores ou a economia do servidor.</li>
+        </ul>
+        <p>Ao identificar uma falha relevante, o jogador deverá comunicar a Administração por meio de um ticket, fornecendo informações e evidências sempre que possível.</p>
+        <p>Não explore nem divulgue publicamente métodos de abuso que possam comprometer o servidor.</p>
+      </div>
+      <div class="bloco-regras" id="rp-de-todos">
+        <h2>O roleplay é de todos <span>REGRA 11</span></h2>
+        <p>Todos os jogadores são responsáveis por contribuir para um ambiente de RP justo, coerente e divertido.</p>
+        <p>É proibido utilizar atitudes deliberadas para destruir a experiência dos demais, ignorar sistematicamente a interpretação alheia ou transformar toda interação em uma disputa para determinar quem vence.</p>
+        <p>Conflitos podem gerar histórias intensas, rivalidades e consequências. Entretanto, todos devem respeitar os limites deste regulamento.</p>
+        <p>Quando uma situação inesperada acontecer, procure interpretá-la e permitir que ela produza consequências narrativas.</p>
+      </div>
+      <div class="bloco-regras" id="gravacao">
+        <h2>Gravação de gameplay e comprovação de ocorrências <span>REGRA 12</span></h2>
+        <p>A Administração recomenda fortemente que todos os jogadores mantenham algum método de gravação de gameplay ativo durante suas sessões. A gravação pode ajudar a comprovar:</p>
+        <ul class="lista-regra">
+          <li>Perdas causadas por bugs ou falhas do servidor;</li>
+          <li>Descumprimentos das regras por outros jogadores;</li>
+          <li>Danos, perdas de itens ou outros prejuízos;</li>
+          <li>Situações que precisem de análise administrativa.</li>
+        </ul>
+        <p>Programas como <strong>Medal</strong> e <strong>NVIDIA ShadowPlay</strong> permitem gravar ou salvar os minutos anteriores da gameplay, conforme a configuração utilizada. Recomendamos configurar um buffer de aproximadamente <strong>5 a 10 minutos</strong>.</p>
+        <div class="subsecao" id="regra-12-1">
+          <h3><span>12.1</span>Ressarcimentos e evidências</h3>
+          <p>A Administração não garante ressarcimento de itens, equipamentos ou prejuízos sem evidências suficientes para comprovar a ocorrência e sua causa.</p>
+          <p>Cada situação será analisada individualmente, considerando as provas apresentadas e as possibilidades de verificação. A ausência de gravação poderá impossibilitar a confirmação do ocorrido.</p>
+          <div class="caixa importante"><b>Importante</b>A gravação é uma recomendação geral para a gameplay, mas permanece <strong>obrigatória</strong> nas situações de assalto e furto previstas na Regra 5.1.</div>
+        </div>
+      </div>
+      <div class="bloco-regras" id="eventos">
+        <h2>Interações com a Administração durante eventos <span>REGRA 13</span></h2>
+        <p>Durante eventos considerados pacíficos, qualquer ação de RP potencialmente hostil, ofensiva ou capaz de gerar conflito direto com membros da Administração deverá ser previamente comunicada e alinhada com a equipe por meio de um ticket.</p>
+        <p>Essa exigência existe para evitar que ferramentas administrativas, comandos ou recursos de organização de eventos interfiram involuntariamente na experiência dos jogadores.</p>
+        <p>A regra não tem como objetivo impedir o RP envolvendo membros da Administração, nem conceder imunidade a esses membros dentro da história. O objetivo é garantir que a situação seja conduzida de forma justa e que todos os envolvidos tenham condições adequadas de participar.</p>
+        <p>Antes de realizar uma ação potencialmente conflitante nessas circunstâncias, abra um ticket e explique a situação pretendida. A equipe poderá orientar sobre a melhor forma de conduzi-la.</p>
+      </div>
+      <div class="bloco-regras" id="medidas">
+        <h2>Descumprimento das regras e medidas administrativas <span>REGRA 14</span></h2>
+        <p>O descumprimento deste regulamento poderá resultar em medidas administrativas proporcionais à gravidade da ocorrência. A Administração poderá considerar:</p>
+        <ul class="lista-regra">
+          <li>A gravidade e as consequências da infração;</li>
+          <li>As evidências disponíveis;</li>
+          <li>O histórico do jogador;</li>
+          <li>A reincidência;</li>
+          <li>A intenção e o contexto da situação;</li>
+          <li>O impacto sobre os envolvidos e sobre o servidor.</li>
+        </ul>
+        <p>Conforme o caso, poderão ser aplicadas advertências, restrições ou outras medidas administrativas cabíveis, incluindo suspensão ou banimento.</p>
+        <p>A abertura de um ticket não garante que a denúncia será confirmada, assim como a apresentação de uma versão dos fatos não substitui a análise das evidências.</p>
+        <p>A Administração se reserva o direito de analisar as ocorrências e tomar decisões de acordo com o regulamento e com a integridade da experiência de RP.</p>
       </div>
 
-      <div class="bloco-regras" id="roleplay">
-        <h2>Roleplay <span>SEÇÃO 02</span></h2>
-        <div class="regra"><span class="regra-num">2.1</span><div><h3>Sem metagaming</h3><p>Não use dentro do jogo informações que seu personagem não teria como saber.</p></div></div>
-        <div class="regra"><span class="regra-num">2.2</span><div><h3>Sem powergaming</h3><p>Não force ações impossíveis nem tire do outro jogador a chance de reagir.</p></div></div>
-        <div class="regra"><span class="regra-num">2.3</span><div><h3>Valorize a vida</h3><p>Seu personagem tem medo de morrer. Aja como alguém que quer sobreviver.</p></div></div>
-      </div>
-
-      <div class="bloco-regras" id="combate">
-        <h2>Combate e PvP <span>SEÇÃO 03</span></h2>
-        <div class="regra"><span class="regra-num">3.1</span><div><h3>Sem morte sem motivo (RDM)</h3><p>Todo conflito precisa de uma razão dentro do roleplay.</p></div></div>
-        <div class="regra"><span class="regra-num">3.2</span><div><h3>Regra a definir</h3><p>Escreva aqui a próxima regra desta categoria.</p></div></div>
-      </div>
-
-      <div class="bloco-regras" id="bases">
-        <h2>Bases e saques <span>SEÇÃO 04</span></h2>
-        <div class="regra"><span class="regra-num">4.1</span><div><h3>Não destrua bases alheias</h3><p>Quebrar portas e paredes da base de outros jogadores não é permitido.</p></div></div>
-        <div class="regra"><span class="regra-num">4.2</span><div><h3>Regra a definir</h3><p>Escreva aqui a próxima regra desta categoria.</p></div></div>
-      </div>
-
-      <div class="bloco-regras" id="discord">
-        <h2>Discord <span>SEÇÃO 05</span></h2>
-        <div class="regra"><span class="regra-num">5.1</span><div><h3>Use os canais certos</h3><p>Cada assunto no seu canal. Suporte sempre por ticket.</p></div></div>
-        <div class="regra"><span class="regra-num">5.2</span><div><h3>Regra a definir</h3><p>Escreva aqui a próxima regra desta categoria.</p></div></div>
+      <div class="regra-principal cantos" id="regra-principal">
+        <span class="rotulo">Regra principal do Velha Guarda RP</span>
+        <h2>Não procure apenas uma forma de ganhar.<br><em>Procure uma forma de contar uma história.</em></h2>
+        <p>O Velha Guarda RP existe para criar experiências únicas, com sobrevivência, escolhas difíceis, conflitos, consequências e histórias construídas coletivamente.</p>
+        <p>Respeite o RP dos outros. Interprete seu personagem. Assuma as consequências de suas decisões.</p>
+        <p class="frase-final">Você controla seu personagem. Não controla a história dos outros.</p>
+        <div class="assinatura">Sobreviva. Interprete. Crie sua história. E não confie em ninguém.</div>
       </div>
     </div>
   </div>
@@ -136,7 +435,7 @@
           <li><a href="index.html">Início</a></li>
           <li><a href="index.html#noticias">Notícias</a></li>
           <li><a href="lore.html">Lore</a></li>
-          <li><a href="regras.html">Regras</a></li>
+          <li><a href="regras.html">Regras de RP</a></li>
         </ul>
       </div>
       <div>
