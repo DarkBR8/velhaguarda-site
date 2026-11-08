@@ -7,7 +7,14 @@
 <meta name="description" content="Velha Guarda: servidor brasileiro de roleplay em Project Zomboid. Sobrevivência, histórias e zumbis na Build 42.">
 <meta property="og:title" content="Velha Guarda · Roleplay Server">
 <meta property="og:description" content="O mundo acabou. A Guarda não. Servidor brasileiro de roleplay em Project Zomboid.">
-<meta property="og:image" content="img/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://velhaguardaservidores.com.br/">
+<meta property="og:image" content="https://velhaguardaservidores.com.br/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#a3b46a">
 <link rel="icon" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,7 +65,7 @@
 
 <!-- ===================== CAPA ===================== -->
 <section class="capa">
-  <div class="capa-horda" aria-hidden="true"></div>
+  <canvas class="gas-capa" aria-hidden="true"></canvas>
 
   <div class="wrap">
     <div class="capa-conteudo revelar">
@@ -71,14 +78,14 @@
         <a href="#sobre" class="btn btn-oliva"><svg class="ico"><use href="#i-play"/></svg>Conheça o servidor</a>
         <a href="https://discord.gg/vVRFBYRUVg" target="_blank" rel="noopener" class="btn btn-contorno"><svg class="ico"><use href="#i-chat"/></svg>Entrar no Discord</a>
       </div>
+      <div class="capa-status" aria-label="Status do servidor">
+        <div><small>Servidor</small><b><span class="ponto ambar"></span>Em breve</b></div>
+        <div><small>Discord</small><b><span class="ponto"></span><span data-discord-online>Comunidade ativa</span></b></div>
+        <div><small>Acesso</small><b>Whitelist</b></div>
+      </div>
     </div>
   </div>
 
-  <div class="status cantos" aria-label="Status do servidor">
-    <small>Status do servidor</small>
-    <b><span class="ponto ambar"></span>Informações em breve</b>
-    <p>Acompanhe os canais oficiais para atualizações.</p>
-  </div>
   <div class="coordenadas">37°40' N &nbsp; 85°50' W <span>// KNOX COUNTY</span></div>
 </section>
 
@@ -226,10 +233,51 @@
   </div>
 </section>
 
+<!-- ===================== FAQ =====================
+     Para adicionar uma pergunta, copie um bloco <details class="pergunta">
+     inteiro e troque o texto do <summary> (pergunta) e do <p> (resposta).
+     ==================================================== -->
+<section class="secao" id="faq">
+  <div class="wrap faq">
+    <div class="revelar">
+      <span class="rotulo">05 // Dúvidas frequentes</span>
+      <h2 class="titulo">Perguntas <em>frequentes</em></h2>
+      <p class="lead">Ficou alguma dúvida? Chama a gente no Discord, a equipe responde por ticket.</p>
+      <a href="https://discord.gg/vVRFBYRUVg" target="_blank" rel="noopener" class="btn btn-contorno" style="margin-top:26px"><svg class="ico"><use href="#i-chat"/></svg>Abrir ticket</a>
+    </div>
+    <div class="perguntas revelar">
+      <details class="pergunta" open>
+        <summary><span class="pergunta-num">Q01</span>Preciso comprar o jogo?</summary>
+        <p>Sim. É preciso ter o <strong>Project Zomboid</strong> na Steam, na <strong>Build 42</strong>. Os mods do servidor são baixados automaticamente ao conectar.</p>
+      </details>
+      <details class="pergunta">
+        <summary><span class="pergunta-num">Q02</span>Como faço minha whitelist?</summary>
+        <p>Entre no nosso <a class="link" href="https://discord.gg/vVRFBYRUVg" target="_blank" rel="noopener">Discord</a> e siga as instruções do canal de whitelist. Depois da aprovação, você recebe o acesso ao servidor.</p>
+      </details>
+      <details class="pergunta">
+        <summary><span class="pergunta-num">Q03</span>Nunca joguei roleplay. Posso entrar?</summary>
+        <p>Pode. Leia as <a class="link" href="regras.html">regras de RP</a> e a <a class="link" href="lore.html">lore</a> com calma. O mais importante é interpretar seu personagem e respeitar a história dos outros.</p>
+      </details>
+      <details class="pergunta">
+        <summary><span class="pergunta-num">Q04</span>Posso atacar outros jogadores?</summary>
+        <p>Só com motivação dentro do RP. <strong>KOS, RDM e RVM são proibidos</strong>, e assaltos precisam ser gravados e enviados por ticket. Veja a <a class="link" href="regras.html#combates">regra 8</a>.</p>
+      </details>
+      <details class="pergunta">
+        <summary><span class="pergunta-num">Q05</span>Meu personagem morreu. E agora?</summary>
+        <p>Na morte comum, ele perde a memória dos 30 minutos anteriores e segue a vida. O <strong>Permadeath</strong> encerra a história de vez e só é aplicado com análise da Administração. Veja a <a class="link" href="regras.html#morte">regra 7</a>.</p>
+      </details>
+      <details class="pergunta">
+        <summary><span class="pergunta-num">Q06</span>Preciso gravar minha gameplay?</summary>
+        <p>É fortemente recomendado (Medal ou ShadowPlay, com 5 a 10 minutos de buffer) e <strong>obrigatório em assaltos e furtos</strong>. Sem gravação, a Administração pode não conseguir comprovar perdas ou denúncias.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== INSTAGRAM ===================== -->
 <section class="sinal" id="instagram">
   <div class="wrap revelar">
-    <span class="rotulo">05 // Siga o sinal</span>
+    <span class="rotulo">06 // Siga o sinal</span>
     <h2 class="titulo">Acompanhe no <em>Instagram</em></h2>
     <a class="sinal-arroba" href="https://www.instagram.com/velhaguardaservidores/" target="_blank" rel="noopener">@velhaguardaservidores</a>
     <p class="lead">Prints, bastidores, eventos e as melhores histórias dos sobreviventes. Marque a gente nas suas capturas de tela.</p>
@@ -268,6 +316,10 @@
     </div>
   </div>
 </footer>
+
+<canvas class="gas" aria-hidden="true"></canvas>
+<div class="progresso" aria-hidden="true"></div>
+<a href="#" class="topo-voltar" aria-label="Voltar ao topo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 15 6-6 6 6"/></svg></a>
 
 <script src="js/site.js"></script>
 </body>

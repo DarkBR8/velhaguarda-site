@@ -144,10 +144,9 @@ a { color: inherit; text-decoration: none; }
   position: relative; min-height: calc(100vh - 84px); display: flex; align-items: center;
   padding: 70px 0 150px; overflow: hidden; isolation: isolate;
   background:
-    linear-gradient(90deg, rgba(11,13,9,.97) 0%, rgba(11,13,9,.85) 32%, rgba(11,13,9,.35) 65%, rgba(11,13,9,.55) 100%),
-    linear-gradient(180deg, rgba(11,13,9,.3) 0%, transparent 30%, transparent 70%, var(--fundo) 100%),
-    url("../img/fundo-capa.jpg") center / cover no-repeat,
-    radial-gradient(ellipse 70% 60% at 75% 45%, #2a3220 0%, transparent 70%),
+    linear-gradient(90deg, rgba(11,13,9,.96) 0%, rgba(11,13,9,.88) 28%, rgba(11,13,9,.45) 50%, rgba(11,13,9,0) 66%),
+    linear-gradient(180deg, rgba(11,13,9,.35) 0%, transparent 22%, transparent 68%, var(--fundo) 100%),
+    url("../img/fundo-capa.jpg") 78% center / cover no-repeat,
     var(--fundo);
 }
 /* Grade tática (aparece quando não há imagem e reforça o clima quando há) */
@@ -167,7 +166,7 @@ a { color: inherit; text-decoration: none; }
           mask-image: linear-gradient(90deg, transparent, #000 45%);
 }
 .capa > .wrap { width: 100%; }
-.capa-conteudo { max-width: 620px; position: relative; z-index: 2; }
+.capa-conteudo { max-width: 680px; position: relative; z-index: 2; }
 .capa-tag {
   display: inline-flex; align-items: center; gap: 14px; padding: 12px 18px; margin-bottom: 26px;
   border: 1px solid var(--linha-2); background: rgba(11,13,9,.7);
@@ -179,7 +178,7 @@ a { color: inherit; text-decoration: none; }
 .capa-local { font-family: var(--f-mono); font-size: .85rem; letter-spacing: 5px; color: var(--oliva); text-transform: uppercase; margin-bottom: 8px; }
 .capa h1 {
   font-family: var(--f-impacto); font-weight: 400; text-transform: uppercase;
-  font-size: clamp(3.4rem, 8vw, 6.4rem); line-height: .92; margin-bottom: 26px;
+  font-size: clamp(3.4rem, 7.2vw, 5.8rem); line-height: .92; margin-bottom: 26px;
   text-shadow: 0 6px 30px rgba(0,0,0,.6);
 }
 .capa h1 em { font-style: normal; color: var(--oliva); display: block; }
@@ -547,3 +546,95 @@ a { color: inherit; text-decoration: none; }
 .duas-colunas > * { min-width: 0; }
 .bloco-regras h2 { flex-wrap: wrap; overflow-wrap: anywhere; }
 @media (max-width: 960px) { .indice { max-height: none; } }
+
+/* =========================================================
+   v2.2 · Capa com arte, gás tóxico, FAQ e extras
+   ========================================================= */
+/* Capa: brilho âmbar das luzes e status em linha */
+.capa::after {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(ellipse 35% 45% at 82% 40%, rgba(217, 164, 58, .12), transparent 70%);
+  mix-blend-mode: screen;
+}
+.capa h1 em { text-shadow: 0 0 40px rgba(163, 180, 106, .25); }
+.gas-capa {
+  position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 60%; z-index: 0; pointer-events: none;
+  opacity: .9; mix-blend-mode: screen;
+}
+.capa > .wrap { position: relative; z-index: 2; }
+.capa-status {
+  display: flex; flex-wrap: wrap; margin-top: 30px; border: 1px solid var(--linha-2);
+  background: rgba(11, 13, 9, .72); backdrop-filter: blur(4px); width: fit-content; max-width: 100%;
+}
+.capa-status > div { padding: 12px 20px; border-left: 1px solid var(--linha-2); }
+.capa-status > div:first-child { border-left: 0; }
+.capa-status small { display: block; font-family: var(--f-mono); font-size: .65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--cinza); margin-bottom: 2px; }
+.capa-status b { display: flex; align-items: center; gap: 8px; font-family: var(--f-tatico); font-size: 1.1rem; letter-spacing: 1px; text-transform: uppercase; color: var(--oliva-2); line-height: 1.2; white-space: nowrap; }
+.coordenadas { text-shadow: 0 1px 3px #000; }
+
+/* Gás tóxico fixo sobre o site inteiro */
+.gas {
+  position: fixed; inset: 0; width: 100%; height: 100%; z-index: 150; pointer-events: none;
+  opacity: .55; mix-blend-mode: screen;
+}
+
+/* Câmera da seção Sobre usa recorte da arte */
+.quadro-imagem { background-position: center; }
+.quadro-imagem::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(180deg, rgba(0,0,0,.25) 0 1px, transparent 1px 3px);
+  mix-blend-mode: multiply;
+}
+
+/* FAQ */
+.faq { display: grid; grid-template-columns: .8fr 1.2fr; gap: 60px; align-items: start; }
+.perguntas { display: grid; gap: 10px; }
+.pergunta { border: 1px solid var(--linha-2); background: rgba(11, 13, 9, .55); transition: border-color .2s, background .2s; }
+.pergunta[open] { border-color: var(--oliva-esc); background: rgba(20, 24, 16, .9); }
+.pergunta summary {
+  list-style: none; cursor: pointer; display: flex; align-items: center; gap: 16px; padding: 18px 22px;
+  font-family: var(--f-tatico); font-weight: 700; font-size: 1.25rem; letter-spacing: .5px; text-transform: uppercase; line-height: 1.2;
+}
+.pergunta summary::-webkit-details-marker { display: none; }
+.pergunta summary::after {
+  content: "+"; margin-left: auto; font-family: var(--f-mono); font-size: 1.3rem; color: var(--oliva); transition: transform .2s;
+}
+.pergunta[open] summary::after { transform: rotate(45deg); }
+.pergunta summary:hover { color: var(--oliva-2); }
+.pergunta-num { font-family: var(--f-mono); font-size: .75rem; color: var(--oliva); letter-spacing: 1px; font-weight: 400; }
+.pergunta p { padding: 0 22px 20px 62px; font-family: var(--f-mono); font-size: .86rem; color: var(--osso-2); line-height: 1.8; }
+.pergunta p strong { color: var(--osso); }
+.pergunta a.link { color: var(--oliva-2); border-bottom: 1px solid currentColor; }
+
+/* Barra de leitura e voltar ao topo */
+.progresso {
+  position: fixed; top: 0; left: 0; height: 3px; width: 0; z-index: 210;
+  background: linear-gradient(90deg, var(--oliva-esc), var(--oliva-2)); box-shadow: 0 0 10px rgba(163,180,106,.6);
+}
+.topo-voltar {
+  position: fixed; right: 20px; bottom: 20px; z-index: 160; width: 48px; height: 48px; display: grid; place-items: center;
+  border: 1px solid var(--oliva); background: rgba(11, 13, 9, .9); color: var(--oliva-2);
+  opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .25s, transform .25s, background .2s;
+}
+.topo-voltar.visivel { opacity: 1; transform: none; pointer-events: auto; }
+.topo-voltar:hover { background: var(--oliva); color: var(--preto); }
+.topo-voltar svg { width: 22px; height: 22px; }
+
+@media (max-width: 960px) {
+  .faq { grid-template-columns: 1fr; gap: 36px; }
+}
+@media (max-width: 640px) {
+  .capa {
+    background:
+      linear-gradient(180deg, rgba(11,13,9,.15) 0, rgba(11,13,9,.35) 200px, rgba(11,13,9,.92) 400px, var(--fundo) 100%),
+      url("../img/fundo-capa.jpg") 84% top / auto 420px no-repeat,
+      var(--fundo);
+    padding-top: 300px;
+  }
+  .capa-status > div { padding: 10px 14px; }
+  .pergunta p { padding-left: 22px; }
+  .gas { opacity: .45; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gas, .gas-capa { display: none; }
+}
