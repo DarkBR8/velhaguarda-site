@@ -158,7 +158,7 @@ function criarGas(canvas, opcoes) {
 // Névoa leve no site todo, concentrada na parte de baixo da tela
 criarGas(document.querySelector(".gas"), {
   cores: ["rgb(120,150,50)", "rgb(150,170,60)", "rgb(90,120,40)"],
-  quantidade: 9, tamanho: 0.55, topo: 0.45, velocidade: 1, intensidade: 0.35,
+  quantidade: 10, tamanho: 0.55, topo: 0.4, velocidade: 1, intensidade: 0.42,
 });
 // Gás mais denso no pé da capa
 criarGas(document.querySelector(".gas-capa"), {
