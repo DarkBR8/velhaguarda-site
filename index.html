@@ -3,25 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Velha Guarda | Roleplay Server de Project Zomboid</title>
-<meta name="description" content="Velha Guarda: servidor brasileiro de roleplay em Project Zomboid. Sobrevivência, histórias e zumbis na Build 42.">
-<meta property="og:title" content="Velha Guarda · Roleplay Server">
-<meta property="og:description" content="Você conseguiria sobreviver? Servidor brasileiro de roleplay em Project Zomboid.">
+<title>Velha Guarda RP | Servidor de Roleplay de Project Zomboid</title>
+<meta name="description" content="Velha Guarda RP: servidor brasileiro de roleplay em Project Zomboid (Build 42), dedicado e online 24/7. Sobrevivência, sistemas exclusivos e histórias em Knox County, 1993.">
+<meta property="og:title" content="Velha Guarda RP · Roleplay Server de Project Zomboid">
+<meta property="og:description" content="Você conseguiria sobreviver? Servidor brasileiro de roleplay em Project Zomboid, Build 42, ambientado em Knox County, 1993.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://velhaguardaservidores.com.br/">
 <meta property="og:image" content="https://velhaguardaservidores.com.br/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Velha Guarda RP">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#a3b46a">
-<link rel="icon" href="img/favicon.png">
+<link rel="canonical" href="https://velhaguardaservidores.com.br/">
+<link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/fundo-capa.webp" type="image/webp" media="(min-width: 641px)">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
 <!-- Ícones usados no site -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -49,19 +54,21 @@
 <!-- ===================== TOPO ===================== -->
 <header class="topo">
   <div class="wrap">
-    <a href="index.html" class="topo-logo" aria-label="Velha Guarda, página inicial"><img src="img/logo-small.png" alt="Velha Guarda"></a>
-    <button class="menu-botao" aria-label="Abrir menu" aria-expanded="false"><span></span></button>
-    <ul class="menu">
+    <a href="index.html" class="topo-logo" aria-label="Velha Guarda, página inicial"><picture><source srcset="img/logo-topo.webp" type="image/webp"><img src="img/logo-topo.png" width="129" height="66" alt="Velha Guarda RP"></picture></a>
+    <button class="menu-botao" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal"><span></span></button>
+    <ul class="menu" id="menu-principal">
       <li><a href="index.html" class="ativo"><svg class="ico"><use href="#i-casa"/></svg>Início</a></li>
       <li><a href="#sobre"><svg class="ico"><use href="#i-info"/></svg>Sobre</a></li>
       <li><a href="#sistemas"><svg class="ico"><use href="#i-sistemas"/></svg>Sistemas</a></li>
       <li><a href="#noticias"><svg class="ico"><use href="#i-radio"/></svg>Notícias</a></li>
       <li><a href="lore.html"><svg class="ico"><use href="#i-pasta"/></svg>Lore</a></li>
       <li><a href="regras.html"><svg class="ico"><use href="#i-lista"/></svg>Regras</a></li>
-      <li class="menu-cta"><a href="https://discord.gg/vVRFBYRUVg" target="_blank" rel="noopener"><svg class="ico"><use href="#i-chat"/></svg>Discord</a></li>
+      <li class="menu-cta"><a href="https://discord.gg/vVRFBYRUVg" target="_blank" rel="noopener" aria-label="Entrar no Discord (abre em nova aba)"><svg class="ico"><use href="#i-chat"/></svg>Discord</a></li>
     </ul>
   </div>
 </header>
+
+<main id="conteudo">
 
 <!-- ===================== CAPA ===================== -->
 <section class="capa">
@@ -69,17 +76,17 @@
 
   <div class="wrap">
     <div class="capa-conteudo revelar">
-      <div class="capa-tag"><svg class="ico"><use href="#i-bio"/></svg>Roleplay Server <i></i> Arquivos de Knox</div>
+      <div class="capa-tag"><svg class="ico"><use href="#i-bio"/></svg><span>Roleplay Server</span><i></i><span>Arquivos de Knox</span></div>
       <div class="capa-local">Knox County, Kentucky</div>
       <h1>Você conseguiria<em>sobreviver?</em></h1>
       <p>Knox County, 1993. Febre, tosse, hospitais lotados. Era apenas uma gripe. Pelo menos era isso que diziam.</p>
       <p>Agora as fronteiras estão fechadas e os mortos andam. Você é apenas uma pessoa comum. E precisa sobreviver.</p>
       <div class="capa-botoes">
-        <a href="#sobre" class="btn btn-oliva"><svg class="ico"><use href="#i-play"/></svg>Conheça o servidor</a>
-        <a href="https://discord.gg/vVRFBYRUVg" target="_blank" rel="noopener" class="btn btn-contorno"><svg class="ico"><use href="#i-chat"/></svg>Entrar no Discord</a>
+        <a href="https://discord.gg/vVRFBYRUVg" target="_blank" rel="noopener" class="btn btn-oliva btn-destaque"><svg class="ico"><use href="#i-chat"/></svg>Entrar no Discord</a>
+        <a href="#sobre" class="btn btn-contorno"><svg class="ico"><use href="#i-play"/></svg>Conheça o servidor</a>
       </div>
       <div class="capa-status" aria-label="Status do servidor">
-        <div><small>Servidor</small><b><span class="ponto ambar"></span>Em breve</b></div>
+        <div><small>Servidor</small><b><span class="ponto"></span>Temporada 1</b></div>
         <div><small>Discord</small><b><span class="ponto"></span><span data-discord-online>Comunidade ativa</span></b></div>
         <div><small>Acesso</small><b>Whitelist</b></div>
       </div>
@@ -145,25 +152,25 @@
     </div>
     <div class="sistemas">
       <article class="sistema cantos revelar">
-        <div class="sistema-topo"><svg><use href="#i-gas"/></svg><span>SYS-01</span></div>
+        <div class="sistema-topo"><svg><use href="#i-gas"/></svg><span class="sistema-id"><b class="selo-vg">Exclusivo VG</b>SYS-01</span></div>
         <h3>Zonas Tóxicas</h3>
         <p>Áreas tomadas por gás venenoso. Entre com proteção, ou não saia de lá.</p>
         <div class="sistema-status"><span class="ponto"></span>Operacional</div>
       </article>
       <article class="sistema cantos revelar">
-        <div class="sistema-topo"><svg><use href="#i-cranio"/></svg><span>SYS-02</span></div>
+        <div class="sistema-topo"><svg><use href="#i-cranio"/></svg><span class="sistema-id"><b class="selo-vg">Exclusivo VG</b>SYS-02</span></div>
         <h3>Zonas de Infestação</h3>
         <p>Regiões com tipos diferentes de infectados, que voltam a lotar as ruas com o tempo.</p>
         <div class="sistema-status"><span class="ponto"></span>Operacional</div>
       </article>
       <article class="sistema cantos revelar">
-        <div class="sistema-topo"><svg><use href="#i-cadeado"/></svg><span>SYS-03</span></div>
+        <div class="sistema-topo"><svg><use href="#i-cadeado"/></svg><span class="sistema-id"><b class="selo-vg">Exclusivo VG</b>SYS-03</span></div>
         <h3>Cadeados com Senha</h3>
         <p>Tranque sua base com cadeados de código. Só entra quem sabe os números.</p>
         <div class="sistema-status"><span class="ponto"></span>Operacional</div>
       </article>
       <article class="sistema cantos revelar">
-        <div class="sistema-topo"><svg><use href="#i-algema"/></svg><span>SYS-04</span></div>
+        <div class="sistema-topo"><svg><use href="#i-algema"/></svg><span class="sistema-id"><b class="selo-vg">Exclusivo VG</b>SYS-04</span></div>
         <h3>Algemas</h3>
         <p>Algemas e abraçadeiras para render, prender e levar prisioneiros.</p>
         <div class="sistema-status"><span class="ponto"></span>Operacional</div>
@@ -201,8 +208,18 @@
 
 <!-- ===================== NOTÍCIAS =====================
      Para publicar uma notícia, copie um bloco <article class="transmissao">
-     inteiro, cole no topo da lista e troque data, título, texto e etiqueta.
+     inteiro, cole no topo da lista e troque data, etiqueta, título e resumo.
      Etiquetas: class="etiqueta" (verde), "etiqueta ambar", "etiqueta alerta" (vermelha)
+
+     CAPA (opcional): troque "capa-xxx" pelo nome da imagem na pasta img/
+     (ideal 640x400). Sem capa? Apague a linha <picture ...> inteira.
+
+     TEXTO COMPLETO (opcional): dentro de <div class="transmissao-corpo">,
+     logo depois do resumo <p>, cole:
+       <details class="transmissao-mais">
+         <summary>Ler transmissão completa</summary>
+         <div><p>Primeiro parágrafo...</p><p>Segundo parágrafo...</p></div>
+       </details>
      ==================================================== -->
 <section class="secao secao-alt" id="noticias">
   <div class="wrap">
@@ -216,24 +233,24 @@
     </div>
     <div class="transmissoes">
       <article class="transmissao revelar">
-        <div class="transmissao-data"><b>07.11</b><span>2026</span></div>
-        <div><h3>Evento do Bunker</h3><p>O primeiro grande evento do servidor aconteceu no Bunker. Obrigado a todos os sobreviventes que participaram. Fiquem de olho no Discord para os próximos.</p></div>
-        <span class="etiqueta alerta">Evento</span>
+        <picture class="transmissao-capa"><source srcset="img/capa-bunker.webp" type="image/webp"><img src="img/capa-bunker.jpg" width="640" height="400" alt="Arte do Luka em uma sala médica abandonada" loading="lazy" decoding="async"></picture>
+        <div class="transmissao-data"><b>07.11</b><span>2026</span><span class="etiqueta alerta">Evento</span></div>
+        <div class="transmissao-corpo"><h3>Evento do Bunker</h3><p>O primeiro grande evento do servidor aconteceu no Bunker. Obrigado a todos os sobreviventes que participaram. Fiquem de olho no Discord para os próximos.</p></div>
       </article>
       <article class="transmissao revelar">
-        <div class="transmissao-data"><b>07.11</b><span>2026</span></div>
-        <div><h3>O site da Velha Guarda está no ar</h3><p>Regras, lore e novidades agora ficam reunidas num só lugar. Salve nos favoritos.</p></div>
-        <span class="etiqueta">Aviso</span>
+        <picture class="transmissao-capa"><source srcset="img/capa-site.webp" type="image/webp"><img src="img/capa-site.jpg" width="640" height="400" alt="Portão da Passagem Sul, zona de contenção" loading="lazy" decoding="async"></picture>
+        <div class="transmissao-data"><b>07.11</b><span>2026</span><span class="etiqueta">Aviso</span></div>
+        <div class="transmissao-corpo"><h3>O site da Velha Guarda está no ar</h3><p>Regras, lore e novidades agora ficam reunidas num só lugar. Salve nos favoritos.</p></div>
       </article>
       <article class="transmissao revelar">
-        <div class="transmissao-data"><b>06.11</b><span>2026</span></div>
-        <div><h3>Zonas Tóxicas chegaram</h3><p>Novas áreas contaminadas foram marcadas no mapa. Respirar ali sem proteção tem consequências.</p></div>
-        <span class="etiqueta ambar">Atualização</span>
+        <picture class="transmissao-capa"><source srcset="img/capa-zonas.webp" type="image/webp"><img src="img/capa-zonas.jpg" width="640" height="400" alt="Sobrevivente com máscara de gás" loading="lazy" decoding="async"></picture>
+        <div class="transmissao-data"><b>06.11</b><span>2026</span><span class="etiqueta ambar">Atualização</span></div>
+        <div class="transmissao-corpo"><h3>Zonas Tóxicas chegaram</h3><p>Novas áreas contaminadas foram marcadas no mapa. Respirar ali sem proteção tem consequências.</p></div>
       </article>
       <article class="transmissao revelar">
-        <div class="transmissao-data"><b>--.--</b><span>Em breve</span></div>
-        <div><h3>A primeira grande horda</h3><p>Fiquem atentos ao Discord. Quando o rádio chiar, procurem abrigo e reforcem as barricadas.</p></div>
-        <span class="etiqueta alerta">Evento</span>
+        <picture class="transmissao-capa"><source srcset="img/capa-horda.webp" type="image/webp"><img src="img/capa-horda.jpg" width="640" height="400" alt="Infectados caminhando na estrada ao pôr do sol" loading="lazy" decoding="async"></picture>
+        <div class="transmissao-data"><b>--.--</b><span>Em breve</span><span class="etiqueta alerta">Evento</span></div>
+        <div class="transmissao-corpo"><h3>A primeira grande horda</h3><p>Fiquem atentos ao Discord. Quando o rádio chiar, procurem abrigo e reforcem as barricadas.</p></div>
       </article>
     </div>
   </div>
@@ -291,12 +308,14 @@
   </div>
 </section>
 
+</main>
+
 <!-- ===================== RODAPÉ ===================== -->
 <footer class="rodape">
   <div class="wrap">
     <div class="rodape-grade">
       <div>
-        <img src="img/logo-small.png" alt="Velha Guarda">
+        <picture><source srcset="img/logo-rodape.webp" type="image/webp"><img src="img/logo-small.png" width="190" height="97" alt="Velha Guarda RP" loading="lazy"></picture>
         <p>Servidor brasileiro de roleplay em Project Zomboid. Sobreviva, crie sua história e honre a Velha Guarda.</p>
       </div>
       <div>

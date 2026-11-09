@@ -15,11 +15,18 @@ if (topo && !topo.classList.contains("fixo-solido")) {
 const botaoMenu = document.querySelector(".menu-botao");
 const menu = document.querySelector(".menu");
 if (botaoMenu && menu) {
+  const fecharMenu = () => {
+    menu.classList.remove("aberto");
+    botaoMenu.setAttribute("aria-expanded", "false");
+    botaoMenu.setAttribute("aria-label", "Abrir menu");
+  };
   botaoMenu.addEventListener("click", () => {
     const aberto = menu.classList.toggle("aberto");
     botaoMenu.setAttribute("aria-expanded", aberto);
+    botaoMenu.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
   });
-  menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => menu.classList.remove("aberto")));
+  menu.querySelectorAll("a").forEach(a => a.addEventListener("click", fecharMenu));
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && menu.classList.contains("aberto")) { fecharMenu(); botaoMenu.focus(); } });
 }
 
 // Elementos aparecem ao rolar
@@ -44,48 +51,6 @@ document.querySelectorAll("[data-copiar]").forEach(botao => {
     });
   });
 });
-
-// Cinzas e brasas subindo na capa
-const canvas = document.getElementById("cinzas");
-if (canvas && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  const ctx = canvas.getContext("2d");
-  let w, h, particulas = [];
-  const ajustar = () => {
-    w = canvas.width = canvas.offsetWidth;
-    h = canvas.height = canvas.offsetHeight;
-    const qtd = Math.min(90, Math.floor(w / 14));
-    particulas = Array.from({ length: qtd }, () => nova(true));
-  };
-  const nova = (inicio) => ({
-    x: Math.random() * w,
-    y: inicio ? Math.random() * h : h + 10,
-    r: Math.random() * 2.2 + 0.6,
-    vy: Math.random() * 0.6 + 0.25,
-    vx: (Math.random() - 0.5) * 0.4,
-    brasa: Math.random() < 0.35,
-    fase: Math.random() * Math.PI * 2,
-  });
-  const desenhar = () => {
-    ctx.clearRect(0, 0, w, h);
-    particulas.forEach((p, i) => {
-      p.y -= p.vy;
-      p.fase += 0.02;
-      p.x += p.vx + Math.sin(p.fase) * 0.3;
-      if (p.y < -10) particulas[i] = nova(false);
-      const alpha = Math.min(1, p.y / h + 0.15);
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = p.brasa
-        ? `rgba(240, 138, 62, ${alpha * 0.9})`
-        : `rgba(191, 181, 166, ${alpha * 0.35})`;
-      ctx.fill();
-    });
-    requestAnimationFrame(desenhar);
-  };
-  ajustar();
-  window.addEventListener("resize", ajustar);
-  desenhar();
-}
 
 // =========================================================
 // v2.2 · Gás tóxico, status do Discord, barra de leitura,
@@ -132,11 +97,12 @@ function criarGas(canvas, opcoes) {
   const ajustar = () => {
     w = canvas.width = Math.max(1, Math.round(canvas.offsetWidth * escala));
     h = canvas.height = Math.max(1, Math.round(canvas.offsetHeight * escala));
-    nuvens = Array.from({ length: opcoes.quantidade }, () => nova(true));
+    const qtd = window.innerWidth < 700 ? Math.ceil(opcoes.quantidade * 0.6) : opcoes.quantidade;
+    nuvens = Array.from({ length: qtd }, () => nova(true));
   };
   let visivel = true;
   const desenhar = () => {
-    if (visivel) {
+    if (visivel && !document.hidden) {
       ctx.clearRect(0, 0, w, h);
       for (let i = 0; i < nuvens.length; i++) {
         const n = nuvens[i];
