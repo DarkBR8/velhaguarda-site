@@ -957,3 +957,49 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
 
 #entrar .passo { background: rgba(11, 13, 9, .72); }
 @media (max-width: 640px) { #sobre::before, #entrar::before, #faq::before { background-size: auto 100%; opacity: .08; } }
+
+/* =========================================================
+   v7 · Fundo do Instagram e texturas de Regras e Lore
+   ========================================================= */
+.sinal {
+  background:
+    linear-gradient(180deg, rgba(11,13,9,.9) 0%, rgba(11,13,9,.62) 40%, rgba(11,13,9,.62) 60%, rgba(11,13,9,.92) 100%),
+    url("../img/fundo-instagram.jpg") center 40% / cover no-repeat,
+    var(--fundo);
+  background:
+    linear-gradient(180deg, rgba(11,13,9,.9) 0%, rgba(11,13,9,.62) 40%, rgba(11,13,9,.62) 60%, rgba(11,13,9,.92) 100%),
+    image-set(url("../img/fundo-instagram.webp") type("image/webp"), url("../img/fundo-instagram.jpg") type("image/jpeg")) center 40% / cover no-repeat,
+    var(--fundo);
+}
+.sinal::after { display: none; }
+.sinal .lead, .sinal-arroba { text-shadow: 0 1px 4px #000; }
+.sinal .lead { color: var(--osso); }
+.sinal .titulo { text-shadow: 0 4px 24px rgba(0,0,0,.75); }
+
+/* Texturas das páginas de Regras e Lore: ilustração repetida por toda a seção */
+.secao-textura { isolation: isolate; overflow: hidden; }
+.secao-textura::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-repeat: repeat; background-position: center top; background-size: 520px auto;
+  opacity: .12;
+}
+.textura-lore::before { background-image: url("../img/textura-lore.png"); }
+.textura-regras::before { background-image: url("../img/textura-regras.png"); }
+.secao-textura .arquivo, .secao-textura .indice, .secao-textura .intro-regras { box-shadow: 0 12px 40px rgba(0,0,0,.45); }
+@media (max-width: 960px) { .secao-textura::before { opacity: .07; background-size: 360px auto; } }
+.textura-regras::before { opacity: .06; }
+.textura-lore::before { opacity: .1; }
+@media (max-width: 960px) { .textura-regras::before { opacity: .04; } }
+
+/* v8 · Texturas de Regras e Lore: uma ilustração ampliada, ocupando a tela toda e fixa ao rolar */
+.secao-textura::before {
+  background-repeat: no-repeat; background-position: center center; background-size: cover;
+  background-attachment: fixed;
+}
+.textura-lore::before { opacity: .06; }
+.textura-regras::before { opacity: .04; }
+@media (max-width: 960px) {
+  .secao-textura::before { background-size: cover; }
+  .textura-lore::before { opacity: .05; }
+  .textura-regras::before { opacity: .035; }
+}
