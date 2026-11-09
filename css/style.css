@@ -917,3 +917,43 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
   .capa-tag .ico { width: 18px; height: 18px; }
 }
 @media (max-width: 640px) { .sistema-id { flex-direction: row; align-items: center; gap: 10px; } .sistema-topo { margin-bottom: 16px; } }
+
+/* Links dentro dos textos: sublinhado colado ao texto (área de toque mantida) */
+.passo a.link, .pergunta a.link, .faq a.link {
+  display: inline; margin: 0; padding: 4px 0; border-bottom: 0;
+  text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
+  text-decoration-color: rgba(196, 212, 138, .6);
+  transition: color var(--transicao), text-decoration-color var(--transicao);
+}
+.passo a.link:hover, .pergunta a.link:hover, .faq a.link:hover { color: var(--osso); text-decoration-color: var(--osso); }
+
+/* =========================================================
+   v5 · Texturas de zumbis e GIF do topo
+   ========================================================= */
+/* Texturas nas seções de fundo liso */
+#sobre, #entrar, #faq { isolation: isolate; overflow: hidden; }
+#sobre::before, #entrar::before, #faq::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background-position: center; background-size: cover; background-repeat: no-repeat;
+  opacity: .11;
+  /* some aos poucos nas bordas de cima e de baixo */
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
+          mask-image: linear-gradient(180deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
+}
+#sobre::before { background-image: url("../img/textura-projeto.png"); opacity: .10; }
+#entrar::before { background-image: url("../img/textura-entrada.png"); }
+#faq::before { background-image: url("../img/textura-faq.png"); }
+
+/* GIF do sobrevivente no canto esquerdo do topo (só em telas largas, onde sobra espaço) */
+.topo-gif { display: none; }
+@media (min-width: 1680px) {
+  .topo-gif {
+    display: block; position: absolute; left: 16px;
+    top: 50%; transform: translateY(-50%); pointer-events: none;
+  }
+  .topo-gif img { height: 60px; width: auto; opacity: .9; }
+}
+@media (prefers-reduced-motion: reduce) { .topo-gif { display: none !important; } }
+
+#entrar .passo { background: rgba(11, 13, 9, .72); }
+@media (max-width: 640px) { #sobre::before, #entrar::before, #faq::before { background-size: auto 100%; opacity: .08; } }

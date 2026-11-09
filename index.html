@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="img/fundo-capa.webp" type="image/webp" media="(min-width: 641px)">
-<link rel="stylesheet" href="css/style.css?v=3">
+<link rel="stylesheet" href="css/style.css?v=6">
 </head>
 <body>
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
@@ -53,6 +53,7 @@
 
 <!-- ===================== TOPO ===================== -->
 <header class="topo">
+    <picture class="topo-gif" aria-hidden="true"><source srcset="img/sobrevivente.webp" type="image/webp"><img src="img/sobrevivente.gif" width="181" height="60" alt="" decoding="async"></picture>
   <div class="wrap">
     <a href="index.html" class="topo-logo" aria-label="Velha Guarda, página inicial"><picture><source srcset="img/logo-topo.webp" type="image/webp"><img src="img/logo-topo.png" width="129" height="66" alt="Velha Guarda RP"></picture></a>
     <button class="menu-botao" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal"><span></span></button>
@@ -233,22 +234,22 @@
     </div>
     <div class="transmissoes">
       <article class="transmissao revelar">
-        <picture class="transmissao-capa"><source srcset="img/capa-bunker.webp" type="image/webp"><img src="img/capa-bunker.jpg" width="640" height="400" alt="Arte do Luka em uma sala médica abandonada" loading="lazy" decoding="async"></picture>
+        <picture class="transmissao-capa"><source srcset="img/capa-bunker.webp" type="image/webp"><img src="img/capa-bunker.jpg" width="640" height="400" alt="Cientista na entrada da Passagem Sul, nível bunker" loading="lazy" decoding="async"></picture>
         <div class="transmissao-data"><b>07.11</b><span>2026</span><span class="etiqueta alerta">Evento</span></div>
         <div class="transmissao-corpo"><h3>Evento do Bunker</h3><p>O primeiro grande evento do servidor aconteceu no Bunker. Obrigado a todos os sobreviventes que participaram. Fiquem de olho no Discord para os próximos.</p></div>
       </article>
       <article class="transmissao revelar">
-        <picture class="transmissao-capa"><source srcset="img/capa-site.webp" type="image/webp"><img src="img/capa-site.jpg" width="640" height="400" alt="Portão da Passagem Sul, zona de contenção" loading="lazy" decoding="async"></picture>
+        <picture class="transmissao-capa"><source srcset="img/capa-site.webp" type="image/webp"><img src="img/capa-site.jpg" width="640" height="400" alt="Sobrevivente com máscara de gás" loading="lazy" decoding="async"></picture>
         <div class="transmissao-data"><b>07.11</b><span>2026</span><span class="etiqueta">Aviso</span></div>
         <div class="transmissao-corpo"><h3>O site da Velha Guarda está no ar</h3><p>Regras, lore e novidades agora ficam reunidas num só lugar. Salve nos favoritos.</p></div>
       </article>
       <article class="transmissao revelar">
-        <picture class="transmissao-capa"><source srcset="img/capa-zonas.webp" type="image/webp"><img src="img/capa-zonas.jpg" width="640" height="400" alt="Sobrevivente com máscara de gás" loading="lazy" decoding="async"></picture>
+        <picture class="transmissao-capa"><source srcset="img/capa-zonas.webp" type="image/webp"><img src="img/capa-zonas.jpg" width="640" height="400" alt="Sobrevivente com máscara de gás diante de uma área contaminada" loading="lazy" decoding="async"></picture>
         <div class="transmissao-data"><b>06.11</b><span>2026</span><span class="etiqueta ambar">Atualização</span></div>
         <div class="transmissao-corpo"><h3>Zonas Tóxicas chegaram</h3><p>Novas áreas contaminadas foram marcadas no mapa. Respirar ali sem proteção tem consequências.</p></div>
       </article>
       <article class="transmissao revelar">
-        <picture class="transmissao-capa"><source srcset="img/capa-horda.webp" type="image/webp"><img src="img/capa-horda.jpg" width="640" height="400" alt="Infectados caminhando na estrada ao pôr do sol" loading="lazy" decoding="async"></picture>
+        <picture class="transmissao-capa"><source srcset="img/capa-horda.webp" type="image/webp"><img src="img/capa-horda.jpg" width="640" height="400" alt="Horda de infectados avançando ao pôr do sol" loading="lazy" decoding="async"></picture>
         <div class="transmissao-data"><b>--.--</b><span>Em breve</span><span class="etiqueta alerta">Evento</span></div>
         <div class="transmissao-corpo"><h3>A primeira grande horda</h3><p>Fiquem atentos ao Discord. Quando o rádio chiar, procurem abrigo e reforcem as barricadas.</p></div>
       </article>
@@ -286,12 +287,12 @@
         <p>Só com motivação dentro do RP. <strong>KOS, RDM e RVM são proibidos</strong>, e assaltos precisam ser gravados e enviados por ticket. Veja a <a class="link" href="regras.html#combates">regra 8</a>.</p>
       </details>
       <details class="pergunta">
-        <summary><span class="pergunta-num">Q05</span>Meu personagem morreu. E agora?</summary>
-        <p>Na morte comum, ele perde a memória dos 30 minutos anteriores e segue a vida. O <strong>Permadeath</strong> encerra a história de vez e só é aplicado com análise da Administração. Veja a <a class="link" href="regras.html#morte">regra 7</a>.</p>
+        <summary><span class="pergunta-num">Q05</span>O servidor utiliza VOIP ou chat para o RP?</summary>
+        <p>O servidor utiliza principalmente o <strong>VOIP</strong> para o RP, mas há a possibilidade de utilizar o chat, se necessário.</p>
       </details>
       <details class="pergunta">
-        <summary><span class="pergunta-num">Q06</span>Preciso gravar minha gameplay?</summary>
-        <p>É fortemente recomendado (Medal ou ShadowPlay, com 5 a 10 minutos de buffer) e <strong>obrigatório em assaltos e furtos</strong>. Sem gravação, a Administração pode não conseguir comprovar perdas ou denúncias.</p>
+        <summary><span class="pergunta-num">Q06</span>Sou streamer. Como recebo minha tag?</summary>
+        <p>Abra um <a class="link" href="https://discord.gg/vVRFBYRUVg" target="_blank" rel="noopener">ticket no Discord</a> e entre em contato para receber sua tag e a permissão para divulgar sua live.</p>
       </details>
     </div>
   </div>
@@ -346,6 +347,6 @@
 <div class="progresso" aria-hidden="true"></div>
 <a href="#" class="topo-voltar" aria-label="Voltar ao topo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 15 6-6 6 6"/></svg></a>
 
-<script src="js/site.js?v=3"></script>
+<script src="js/site.js?v=6"></script>
 </body>
 </html>
