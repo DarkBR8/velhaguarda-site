@@ -1113,3 +1113,32 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
   .contagem-numeros b { font-size: 1.7rem; }
   .contagem-numeros span { font-size: .66rem; letter-spacing: 1px; }
 }
+
+/* v12 · Fundo da página Temporada 2 (cidade em ruínas) */
+.secao-t2 {
+  background:
+    linear-gradient(180deg, var(--fundo) 0%, rgba(16,19,13,.55) 14%, rgba(16,19,13,.45) 50%, rgba(16,19,13,.7) 85%, var(--fundo) 100%),
+    linear-gradient(90deg, rgba(11,13,9,.55), rgba(11,13,9,.25) 50%, rgba(11,13,9,.55)),
+    url("../img/fundo-temporada2.jpg") center 30% / cover no-repeat,
+    var(--fundo);
+  background:
+    linear-gradient(180deg, var(--fundo) 0%, rgba(16,19,13,.55) 14%, rgba(16,19,13,.45) 50%, rgba(16,19,13,.7) 85%, var(--fundo) 100%),
+    linear-gradient(90deg, rgba(11,13,9,.55), rgba(11,13,9,.25) 50%, rgba(11,13,9,.55)),
+    image-set(url("../img/fundo-temporada2.webp") type("image/webp"), url("../img/fundo-temporada2.jpg") type("image/jpeg")) center 30% / cover no-repeat,
+    var(--fundo);
+}
+.secao-t2 .t2-lancamento { background-color: rgba(14, 17, 11, .9); backdrop-filter: blur(4px); }
+.secao-t2 .t2-teaser-texto { text-shadow: 0 2px 8px rgba(0,0,0,.8); }
+.secao-t2 .t2-teaser-texto .lead { color: var(--osso); }
+.secao-t2 {
+  background:
+    linear-gradient(180deg, var(--fundo) 0%, rgba(16,19,13,.25) 12%, rgba(16,19,13,.12) 50%, rgba(16,19,13,.45) 88%, var(--fundo) 100%),
+    url("../img/fundo-temporada2.jpg") center 30% / cover no-repeat,
+    var(--fundo);
+  background:
+    linear-gradient(180deg, var(--fundo) 0%, rgba(16,19,13,.25) 12%, rgba(16,19,13,.12) 50%, rgba(16,19,13,.45) 88%, var(--fundo) 100%),
+    image-set(url("../img/fundo-temporada2.webp") type("image/webp"), url("../img/fundo-temporada2.jpg") type("image/jpeg")) center 30% / cover no-repeat,
+    var(--fundo);
+}
+.secao-t2 .t2-teaser-texto { padding: 26px 28px; background: rgba(11, 13, 9, .72); border: 1px solid var(--linha-2); border-radius: var(--raio); backdrop-filter: blur(4px); }
+.secao-t2 { background-position: center top, center 45%, 0 0 !important; }
