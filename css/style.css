@@ -1142,3 +1142,16 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
 }
 .secao-t2 .t2-teaser-texto { padding: 26px 28px; background: rgba(11, 13, 9, .72); border: 1px solid var(--linha-2); border-radius: var(--raio); backdrop-filter: blur(4px); }
 .secao-t2 { background-position: center top, center 45%, 0 0 !important; }
+
+/* v14 · Sistemas exclusivos com 10 módulos: 5 por linha no computador */
+@media (min-width: 1200px) {
+  .sistemas { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
+  .sistema { padding: 24px 20px 20px; }
+  .sistema h3 { font-size: 1.32rem; min-height: 2.3em; }
+  .sistema p { font-size: .82rem; }
+  .sistema-topo svg { width: 36px; height: 36px; }
+}
+@media (min-width: 961px) and (max-width: 1199px) { .sistemas { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1200px) {
+  .sistema h3 { font-size: clamp(1.1rem, 1.05vw, 1.32rem); overflow-wrap: anywhere; }
+}
