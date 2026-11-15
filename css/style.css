@@ -1003,3 +1003,113 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
   .textura-lore::before { opacity: .05; }
   .textura-regras::before { opacity: .035; }
 }
+
+/* =========================================================
+   v11 · Página Temporada 2 e item do menu
+   ========================================================= */
+.menu a.menu-temporada { color: var(--ambar); }
+.menu a.menu-temporada small { font-size: .78em; opacity: .85; margin-left: 2px; }
+.menu a.menu-temporada:hover, .menu a.menu-temporada.ativo { color: #f0c062; }
+.menu a.menu-temporada.ativo::after { background: var(--ambar); }
+@media (max-width: 1280px) and (min-width: 861px) {
+  .menu a { padding: 0 8px; font-size: 1rem; }
+  .menu a .ico { display: none; }
+  .menu .menu-cta { margin-left: 6px; }
+}
+
+.banner-t2 h1 em { color: var(--ambar); }
+.secao-t2 { padding-top: clamp(56px, 7vw, 90px); }
+.t2 { display: grid; gap: clamp(28px, 4vw, 44px); }
+.t2-bloco { scroll-margin-top: 110px; }
+.t2-bloco h2 {
+  font-family: var(--f-impacto); font-weight: 400; text-transform: uppercase;
+  font-size: clamp(2rem, 4.4vw, 3rem); line-height: 1; margin-bottom: 16px; text-wrap: balance;
+}
+.t2-bloco h2 em { font-style: normal; color: var(--oliva); }
+.t2-bloco p strong { color: var(--osso); }
+
+/* Lançamento */
+.t2-lancamento { display: grid; grid-template-columns: minmax(220px, .7fr) 1.3fr; gap: 0; border-radius: var(--raio); box-shadow: var(--sombra-card); }
+.t2-lancamento-data {
+  padding: clamp(28px, 4vw, 44px); border-right: 1px solid var(--linha-2);
+  background: linear-gradient(160deg, rgba(217,164,58,.12), transparent 60%);
+  display: flex; flex-direction: column; justify-content: center;
+}
+.t2-lancamento-data .rotulo { color: var(--ambar); }
+.t2-lancamento-data .rotulo::before { background: var(--ambar); }
+.t2-data { font-family: var(--f-impacto); line-height: .85; color: var(--osso); display: flex; align-items: baseline; }
+.t2-data b { font-weight: 400; font-size: clamp(6rem, 13vw, 9.5rem); }
+.t2-data span { font-size: clamp(2.6rem, 5vw, 3.6rem); color: var(--ambar); }
+.t2-ano { margin-top: 14px; font-family: var(--f-mono); font-size: .8rem; letter-spacing: 3px; text-transform: uppercase; color: var(--osso-2); }
+.t2-lancamento-info { padding: clamp(28px, 4vw, 44px); }
+.t2-lancamento-info > p { font-family: var(--f-mono); font-size: .95rem; line-height: 1.85; color: var(--osso-2); max-width: 60ch; }
+
+.contagem { margin: 26px 0 28px; padding: 18px 20px; border: 1px solid var(--linha-2); background: rgba(11,13,9,.6); border-radius: var(--raio); }
+.contagem small { display: block; font-family: var(--f-mono); font-size: .74rem; letter-spacing: 2px; text-transform: uppercase; color: var(--osso-2); margin-bottom: 10px; }
+.contagem-numeros { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.contagem-numeros div { text-align: center; padding: 10px 4px; border: 1px solid var(--linha); background: var(--preto); }
+.contagem-numeros b { display: block; font-family: var(--f-impacto); font-weight: 400; font-size: clamp(1.9rem, 4vw, 2.6rem); line-height: 1; color: var(--oliva-2); font-variant-numeric: tabular-nums; }
+.contagem-numeros span { font-family: var(--f-mono); font-size: .72rem; letter-spacing: 2px; text-transform: uppercase; color: var(--osso-2); }
+.contagem-fim { display: flex; align-items: center; gap: 10px; font-family: var(--f-tatico); font-weight: 700; font-size: 1.3rem; letter-spacing: 1px; text-transform: uppercase; color: var(--oliva-2); }
+
+/* Teaser */
+.t2-teaser { display: grid; grid-template-columns: 1fr minmax(300px, 400px); gap: clamp(28px, 5vw, 64px); align-items: center; }
+.t2-teaser .lead { margin-bottom: 26px; }
+.t2-video { padding: 14px; border-radius: var(--raio); }
+.t2-video .instagram-media {
+  margin: 0 !important; min-width: 0 !important; width: 100% !important; max-width: 100% !important;
+  background: var(--preto); border: 0; border-radius: 2px; min-height: 420px;
+  display: flex; align-items: center; justify-content: center;
+}
+.t2-video .instagram-media > a { font-family: var(--f-tatico); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--oliva-2); padding: 20px; }
+.t2-video iframe { border-radius: 2px !important; }
+
+@media (max-width: 860px) {
+  .t2-lancamento, .t2-teaser { grid-template-columns: 1fr; }
+  .t2-lancamento-data { border-right: 0; border-bottom: 1px solid var(--linha-2); }
+  .t2-video { max-width: 420px; width: 100%; margin: 0 auto; }
+}
+@media (max-width: 640px) {
+  .contagem-numeros { gap: 6px; }
+  .t2-lancamento .btn { width: 100%; }
+}
+
+/* v11 · Topo com 8 itens: logo nunca encolhe, menu compacto e ☰ em telas médias */
+.topo-logo { flex-shrink: 0; }
+.menu a { white-space: nowrap; }
+@media (max-width: 1560px) {
+  .menu { gap: 2px; }
+  .menu a { padding: 0 10px; font-size: 1.05rem; }
+  .menu a .ico { display: none; }
+  .menu .menu-cta { margin-left: 8px; }
+  .menu .menu-cta a { padding: 0 16px; }
+}
+@media (max-width: 1100px) {
+  .menu-botao { display: block; }
+  .menu {
+    position: fixed; top: 84px; left: 0; right: 0; height: auto; flex-direction: column; gap: 0;
+    background: rgba(11,13,9,.98); border-bottom: 1px solid var(--linha-2); padding: 8px 24px 22px; display: none;
+  }
+  .menu.aberto { display: flex; }
+  .menu a { padding: 14px 0; font-size: 1.3rem; }
+  .menu a.ativo::after { left: 0; right: auto; width: 30px; bottom: 8px; }
+  .menu .menu-cta { margin: 12px 0 0; }
+  .menu .menu-cta a { padding: 0 20px; }
+}
+@media (max-width: 640px) { .menu { top: 72px; } }
+
+/* Temporada 2 no celular: nada passa da largura da tela */
+.t2 > *, .t2-lancamento > *, .t2-teaser > * { min-width: 0; }
+@media (max-width: 860px) {
+  .t2-lancamento, .t2-teaser { grid-template-columns: minmax(0, 1fr); }
+}
+.faixa { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.faixa > div, .faixa > div > div { min-width: 0; }
+@media (max-width: 960px) { .faixa { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .faixa { grid-template-columns: minmax(0, 1fr); } }
+.contagem-fim[hidden], .contagem-numeros[hidden], .contagem small[hidden] { display: none !important; }
+@media (max-width: 640px) {
+  .btn { white-space: normal; text-align: center; line-height: 1.15; padding: 12px 18px; }
+  .contagem-numeros b { font-size: 1.7rem; }
+  .contagem-numeros span { font-size: .66rem; letter-spacing: 1px; }
+}
