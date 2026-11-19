@@ -1155,3 +1155,58 @@ body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; 
 @media (min-width: 1200px) {
   .sistema h3 { font-size: clamp(1.1rem, 1.05vw, 1.32rem); overflow-wrap: anywhere; }
 }
+
+/* =========================================================
+   v15 · Lore da Temporada 2: imagens, fichas e facções
+   ========================================================= */
+.arquivo h2 em { font-style: normal; color: var(--oliva); }
+.narrativa strong { color: var(--oliva-2); font-weight: 600; }
+.lore-figura { margin: 30px 0 6px; }
+.lore-figura picture, .lore-figura img { display: block; width: 100%; height: auto; border-radius: var(--raio); }
+.lore-figura picture { position: relative; overflow: hidden; border: 1px solid var(--linha-2); box-shadow: var(--sombra-card); }
+.lore-figura picture::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(180deg, rgba(0,0,0,.18) 0 1px, transparent 1px 3px); }
+.lore-figura figcaption { margin-top: 10px; font-family: var(--f-mono); font-size: .76rem; letter-spacing: 1px; color: var(--osso-2); }
+.lore-figura figcaption::before { content: "▸ "; color: var(--oliva); }
+
+.lore-destaque {
+  margin: 22px 0; padding: 18px 22px; border: 1px solid var(--oliva-esc); border-left: 4px solid var(--oliva);
+  background: rgba(163,180,106,.06); border-radius: var(--raio); display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px;
+}
+.lore-destaque small { flex-basis: 100%; font-family: var(--f-mono); font-size: .72rem; letter-spacing: 3px; text-transform: uppercase; color: var(--oliva); }
+.lore-destaque b { font-family: var(--f-impacto); font-weight: 400; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1; text-transform: uppercase; color: var(--osso); }
+.lore-destaque span { font-family: var(--f-tatico); font-weight: 700; font-size: 1.3rem; letter-spacing: 2px; text-transform: uppercase; color: var(--oliva-2); }
+
+.fichas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 24px 0; }
+.ficha { padding: 22px 22px 20px; border: 1px solid var(--linha-2); border-top: 3px solid var(--oliva); background: rgba(11,13,9,.6); border-radius: var(--raio); }
+.ficha-alerta { border-top-color: var(--alerta); }
+.ficha-topo { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+.ficha-topo b { font-family: var(--f-impacto); font-weight: 400; font-size: 2rem; line-height: 1; color: var(--osso); letter-spacing: 1px; }
+.ficha-topo .etiqueta { padding: 3px 9px; }
+.ficha h3 { font-family: var(--f-tatico); font-weight: 700; font-size: 1.2rem; letter-spacing: .5px; text-transform: uppercase; margin-bottom: 10px; color: var(--osso); }
+.narrativa .ficha p { font-size: .86rem; line-height: 1.75; margin-top: 10px; }
+.narrativa .ficha p.ficha-porem { padding-top: 10px; border-top: 1px dashed var(--linha-2); }
+.ficha-porem b { color: var(--ambar); }
+.narrativa .ficha p.ficha-conclusao { font-family: var(--f-tatico); font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; text-transform: uppercase; color: var(--oliva-2); }
+
+.lore-lista, .lore-passos { margin: 14px 0 18px; display: grid; gap: 8px; padding: 0; list-style: none; }
+.lore-lista li, .lore-passos li { position: relative; padding-left: 30px; font-family: var(--f-mono); font-size: .9rem; line-height: 1.7; color: var(--osso); }
+.lore-lista li::before { content: "▸"; position: absolute; left: 8px; color: var(--oliva); }
+.lore-passos { counter-reset: passo-lore; }
+.lore-passos li { counter-increment: passo-lore; padding: 10px 14px 10px 54px; border: 1px solid var(--linha); background: rgba(11,13,9,.45); border-radius: var(--raio); }
+.lore-passos li::before { content: counter(passo-lore, decimal-leading-zero); position: absolute; left: 14px; top: 10px; font-family: var(--f-mono); color: var(--oliva); font-weight: 600; }
+
+.faccoes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 18px 0 22px; }
+.faccao { padding: 14px 16px; border: 1px solid var(--linha-2); border-left: 3px solid var(--ambar); background: rgba(11,13,9,.5); border-radius: var(--raio); }
+.faccao b { display: block; font-family: var(--f-tatico); font-weight: 700; font-size: 1.1rem; letter-spacing: .5px; text-transform: uppercase; color: var(--osso); margin-bottom: 2px; }
+.narrativa .faccao p { margin: 0; font-size: .84rem; line-height: 1.6; color: var(--osso-2); }
+
+@media (max-width: 760px) {
+  .fichas, .faccoes { grid-template-columns: minmax(0, 1fr); }
+}
+.banner-lore2 {
+  background:
+    linear-gradient(90deg, rgba(11,13,9,.95) 0%, rgba(11,13,9,.75) 45%, rgba(11,13,9,.35) 100%),
+    image-set(url("../img/lore2-3.webp") type("image/webp"), url("../img/lore2-3.jpg") type("image/jpeg")) center 40% / cover no-repeat,
+    var(--fundo);
+}
+.lore-figura img { max-height: 480px; object-fit: cover; object-position: center 45%; }
